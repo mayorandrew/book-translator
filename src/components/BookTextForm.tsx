@@ -2,6 +2,7 @@ import { Component, createSignal } from 'solid-js';
 import ISO6391 from 'iso-639-1';
 import s from './BookTextForm.module.css';
 import Button from './ui/Button';
+import { makePersisted } from '@solid-primitives/storage';
 
 export interface BookTextFormProps {
   onTranslate: (text: string, language: string) => void;
@@ -17,7 +18,10 @@ const getBrowserLanguage = () => {
 const BookTextForm: Component<BookTextFormProps> = (props) => {
   const browserLanguage = getBrowserLanguage();
   const hasBrowserLanguage = languages.some((l) => l.code === browserLanguage);
-  const [selectedLanguage, setSelectedLanguage] = createSignal(browserLanguage);
+  const [selectedLanguage, setSelectedLanguage] = makePersisted(
+    createSignal(browserLanguage),
+    { name: 'target-language' },
+  );
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
@@ -53,7 +57,9 @@ const BookTextForm: Component<BookTextFormProps> = (props) => {
             disabled={props.loading}
           >
             {languages.map((lang) => (
-              <option value={lang.code}>{lang.name} &mdash; {lang.nativeName}</option>
+              <option value={lang.code}>
+                {lang.name} &mdash; {lang.nativeName}
+              </option>
             ))}
             {!hasBrowserLanguage && (
               <option value={browserLanguage}>{browserLanguage}</option>
