@@ -1,0 +1,52 @@
+.form {
+  position: relative;
+  height: 100vh;
+  min-height: 400px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.textarea {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.formControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.languageSelector label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.languageSelector select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.translateButton {
+  min-width: 120px;
+}
