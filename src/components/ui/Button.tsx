@@ -8,6 +8,8 @@ export interface ButtonProps {
   children: JSX.Element;
   disabled?: boolean;
   class?: string;
+  title?: string;
+  ariaLabel?: string;
 }
 
 const Button: Component<ButtonProps> = (props) => {
@@ -16,6 +18,8 @@ const Button: Component<ButtonProps> = (props) => {
       type={props.type || 'button'}
       class={clsx(s.button, props.class)}
       disabled={props.disabled}
+      title={props.title}
+      aria-label={props.ariaLabel}
       onClick={props.onClick}
     >
       {props.children}

@@ -5,6 +5,24 @@ import './utils/normalize.css';
 import './index.css';
 import App from './App';
 
+// Set initial theme based on saved preference or system preference
+const getInitialTheme = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    return savedTheme;
+  }
+  
+  // Check system preference
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return 'dark';
+  }
+  
+  return 'light';
+};
+
+// Apply theme to document before rendering to prevent flash
+document.documentElement.setAttribute('data-theme', getInitialTheme());
+
 const root = document.getElementById('root');
 
 if (!root) {

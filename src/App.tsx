@@ -5,10 +5,13 @@ import ApiKeyForm from './components/ApiKeyForm';
 import BookTextForm from './components/BookTextForm';
 import TranslationResults from './components/TranslationResults';
 import { translateText } from './data/openaiTranslations';
+import ThemeToggle from './components/ThemeToggle';
+import { ThemeProvider } from './utils/ThemeContext';
 
-const App: Component = () => {
+const BookTranslator: Component = () => {
   const data = translations.value;
-  const [abortController, setAbortController] = createSignal<AbortController | null>(null);
+  const [abortController, setAbortController] =
+    createSignal<AbortController | null>(null);
 
   const handleTranslate = (text: string, targetLanguage: string) => {
     const controller = new AbortController();
@@ -42,12 +45,18 @@ const App: Component = () => {
           onNewText={handleNewText}
         />
       ) : (
-        <BookTextForm
-          loading={data.loading}
-          onTranslate={handleTranslate}
-        />
+        <BookTextForm loading={data.loading} onTranslate={handleTranslate} />
       )}
     </>
+  );
+};
+
+const App: Component = () => {
+  return (
+    <ThemeProvider>
+      <ThemeToggle />
+      <BookTranslator />
+    </ThemeProvider>
   );
 };
 
