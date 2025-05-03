@@ -36,7 +36,6 @@ export const translateText = async (
 
     const translationsIterable = ixa.from(batches).pipe(
       ixao.concatMap((batch, iBatch, signal) => {
-        console.log(signal);
         const stream = client.responses.stream(
           {
             model: 'gpt-4.1-mini',
