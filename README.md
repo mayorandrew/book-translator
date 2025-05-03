@@ -1,5 +1,7 @@
 # Book Translator
 
+![Screenshot of the application with two columns](./docs/screenshot1.png)
+
 ## Overview
 
 Book Translator is an application designed to help language learners read books by providing side-by-side translations using the ChatGPT API. 
