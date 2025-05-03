@@ -9,5 +9,7 @@ export default defineConfig({
   },
   build: {
     target: 'modules',
+    sourcemap: true,
+    minify: 'esbuild',
   },
 });

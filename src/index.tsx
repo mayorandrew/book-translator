@@ -1,8 +1,8 @@
 /* @refresh reload */
-import { render } from 'solid-js/web';
-
 import './utils/normalize.css';
 import './index.css';
+import 'ix/asynciterable/todomstream';
+import { render } from 'solid-js/web';
 import App from './App';
 
 // Set initial theme based on saved preference or system preference

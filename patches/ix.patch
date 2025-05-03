@@ -1,0 +1,16 @@
+diff --git a/package.json b/package.json
+index 606ba8ca98104272d303f0298766ebc6486f5056..ffca7abba9fb8cabef3cc2973a1588497710a265 100644
+--- a/package.json
++++ b/package.json
+@@ -10,7 +10,10 @@
+   "main": "node.js",
+   "type": "commonjs",
+   "module": "node.mjs",
+-  "sideEffects": false,
++  "sideEffects": [
++    "./asynciterable/todomstream.mjs",
++    "./asynciterable/todomstream.js"
++  ],
+   "esm": {
+     "mode": "all",
+     "sourceMap": true
