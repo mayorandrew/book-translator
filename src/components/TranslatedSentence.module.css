@@ -1,0 +1,14 @@
+.translatedSentence {
+  line-height: 1.5;
+  display: inline;
+}
+
+.translatedWord {
+  cursor: help;
+  position: relative;
+  border-bottom: 1px dotted #ccc;
+}
+
+.translatedWord:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

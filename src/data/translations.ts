@@ -1,29 +1,46 @@
 import { createStore } from 'solid-js/store';
 
-export interface Translation {
+export interface Location {
+  start: number;
+  end: number;
+}
+
+export interface WordPart {
+  text: string;
+  location: Location;
+}
+
+export interface Word {
+  parts: WordPart[];
+  normalized: string;
+  translated: string;
+}
+
+export interface Sentence {
   original: string;
   translated: string;
+  words: Word[];
 }
 
 export interface TranslationsState {
   loading: boolean;
-  translations: Translation[];
+  sentences: Sentence[];
 }
 
 const [store, setStore] = createStore<TranslationsState>({
   loading: false,
-  translations: [],
+  sentences: [],
 });
 
 export const translations = {
   value: store,
-  add: (...translation: Translation[]) => {
-    setStore('translations', (prev) => [...prev, ...translation]);
+  add: (...translation: Sentence[]) => {
+    setStore('sentences', (prev) => [...prev, ...translation]);
   },
   clear: () => {
     setStore({
       loading: false,
-      translations: [],
+      sentences: [],
     });
   },
   setLoading: (loading: boolean) => {

@@ -38,9 +38,9 @@ const BookTranslator: Component = () => {
     <>
       {!openaiClient() ? (
         <ApiKeyForm />
-      ) : data.translations.length > 0 ? (
+      ) : data.sentences.length > 0 ? (
         <TranslationResults
-          results={data.translations}
+          results={data.sentences}
           loading={data.loading}
           onNewText={handleNewText}
         />
