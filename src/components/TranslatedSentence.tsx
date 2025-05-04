@@ -18,46 +18,39 @@ const TranslatedSentence: Component<TranslatedSentenceProps> = (props) => {
       return text;
     }
 
-    const locations = words
-      .flatMap((word, iWord) =>
-        word.parts.map((p) => ({
-          ...p.location,
-          text: p.text,
-          word,
-          iWord,
-          combined: word.parts.map((p) => p.text).join(' ... '),
-        })),
-      )
-      .sort((a, b) => a.start - b.start);
-
     let index = 0;
-    let iLocation = 0;
+    let iWord = 0;
 
     while (index < text.length) {
-      const nextLoc = locations.at(iLocation);
+      const nextWord = words.at(iWord);
 
-      if (!nextLoc) {
+      if (!nextWord) {
         result.push(text.substring(index));
         break;
       }
 
-      if (nextLoc.start > index) {
-        result.push(text.substring(index, nextLoc.start));
+      const wordStart = text.indexOf(nextWord.word, index);
+
+      if (wordStart === -1) {
+        iWord++;
+        continue;
       }
 
-      const start = Math.max(index, nextLoc.start);
+      if (wordStart > index) {
+        result.push(text.substring(index, wordStart));
+      }
 
       result.push(
         <span
           class={s.translatedWord}
-          title={`${nextLoc.combined} (${nextLoc.word.normalized}) — ${nextLoc.word.translated}`}
+          title={`${nextWord.parts.join('…')} (${nextWord.normalized}) — ${nextWord.translated}`}
         >
-          {text.substring(start, nextLoc.end + 1)}
+          {nextWord.word}
         </span>,
       );
 
-      index = nextLoc.end + 1;
-      iLocation++;
+      index = wordStart + nextWord.word.length;
+      iWord++;
     }
 
     return result;

@@ -1,28 +1,11 @@
 import { z } from 'zod';
 
-const zInt = z.number().int();
-
-const zLocation = z.object({
-  start: zInt.describe(
-    'The start index of the location in the original sentence',
-  ),
-  end: zInt.describe('The end index of the location in the original sentence'),
-});
-
-const zWordPart = z.object({
-  text: z
-    .string()
-    .describe('The part of the word as it appears in the original sentence'),
-  location: zLocation.describe(
-    'The location of the word part in the original sentence',
-  ),
-});
-
 const zWord = z
   .object({
+    word: z.string().describe('The word as it appears in the original sentence.'),
     parts: z
-      .array(zWordPart)
-      .describe('List of all word parts from the original sentence'),
+      .array(z.string())
+      .describe('List of all parts related to the same word from the original sentence'),
     normalized: z
       .string()
       .describe(
@@ -31,7 +14,7 @@ const zWord = z
     translated: z
       .string()
       .describe(
-        'Translation of the word into the target language corresponding to its meaning in this sentence',
+        'Translation or explanation of the word into the target language in the context of this sentence',
       ),
   })
   .describe(
@@ -39,7 +22,7 @@ const zWord = z
   );
 
 export const zSentence = z.object({
-  original: z.string().describe('The original sentence in the source language'),
+  original: z.string().describe('The original sentence in the source language, annotated to highlight words'),
   translated: z.string().describe('The translated sentence'),
   words: z
     .array(zWord)

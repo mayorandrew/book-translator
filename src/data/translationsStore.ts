@@ -1,17 +1,8 @@
 import { createStore } from 'solid-js/store';
 
-export interface Location {
-  start: number;
-  end: number;
-}
-
-export interface WordPart {
-  text: string;
-  location: Location;
-}
-
 export interface Word {
-  parts: WordPart[];
+  word: string;
+  parts: string[];
   normalized: string;
   translated: string;
 }
