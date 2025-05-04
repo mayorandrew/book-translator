@@ -1,4 +1,5 @@
 import { createStore } from 'solid-js/store';
+import { createSignal } from 'solid-js';
 
 export interface Location {
   start: number;
@@ -32,8 +33,8 @@ const [store, setStore] = createStore<TranslationsState>({
   sentences: [],
 });
 
-export const translations = {
-  value: store,
+export const [translationsStore] = createSignal({
+  state: store,
   add: (...translation: Sentence[]) => {
     setStore('sentences', (prev) => [...prev, ...translation]);
   },
@@ -46,4 +47,4 @@ export const translations = {
   setLoading: (loading: boolean) => {
     setStore('loading', loading);
   },
-};
+});

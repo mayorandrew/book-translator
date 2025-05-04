@@ -1,15 +1,16 @@
 import { Component, createSignal } from 'solid-js';
-import { openaiClient } from './data/openai';
-import { translations } from './data/translations';
+import { openaiClient } from './data/openaiClient';
+import { translationsStore } from './data/translationsStore';
 import ApiKeyForm from './components/ApiKeyForm';
 import BookTextForm from './components/BookTextForm';
 import TranslationResults from './components/TranslationResults';
-import { translateText } from './data/openaiTranslations';
+import { textTranslationService } from './data/textTranslationService';
 import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './utils/ThemeContext';
+import { demoMode } from './data/demoMode';
 
 const BookTranslator: Component = () => {
-  const data = translations.value;
+  const data = translationsStore().state;
   const [abortController, setAbortController] =
     createSignal<AbortController | null>(null);
 
@@ -22,7 +23,11 @@ const BookTranslator: Component = () => {
       return controller;
     });
 
-    return translateText(text, targetLanguage, controller.signal);
+    return textTranslationService().translateText(
+      text,
+      targetLanguage,
+      controller.signal,
+    );
   };
 
   const handleNewText = () => {
@@ -31,13 +36,16 @@ const BookTranslator: Component = () => {
       setAbortController(null);
     }
 
-    translations.clear();
+    translationsStore().clear();
   };
 
   return (
     <>
-      {!openaiClient() ? (
-        <ApiKeyForm />
+      {!openaiClient().client() && !demoMode().isDemo() ? (
+        <ApiKeyForm
+          onSetApiKey={(apiKey) => openaiClient().setApiKey(apiKey)}
+          onChooseDemoMode={() => demoMode().setIsDemo(true)}
+        />
       ) : data.sentences.length > 0 ? (
         <TranslationResults
           results={data.sentences}

@@ -2,7 +2,7 @@ import type { Component } from 'solid-js';
 import { For, Show } from 'solid-js';
 import s from './TranslationResults.module.css';
 import Button from './ui/Button';
-import { Sentence } from '../data/translations';
+import { Sentence } from '../data/translationsStore';
 import TranslatedSentence from './TranslatedSentence';
 
 interface TranslationResultsProps {

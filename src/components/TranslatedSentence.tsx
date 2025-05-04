@@ -1,5 +1,5 @@
 import type { Component, JSX } from 'solid-js';
-import type { Sentence } from '../data/translations';
+import type { Sentence } from '../data/translationsStore';
 import s from './TranslatedSentence.module.css';
 
 interface TranslatedSentenceProps {

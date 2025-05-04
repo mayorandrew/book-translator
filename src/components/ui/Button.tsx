@@ -1,8 +1,9 @@
 import { Component, JSX } from 'solid-js';
-import clsx from "clsx";
+import clsx from 'clsx';
 import s from './Button.module.css';
 
 export interface ButtonProps {
+  variant?: 'primary' | 'secondary';
   type?: 'button' | 'submit' | 'reset';
   onClick?: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>;
   children: JSX.Element;
@@ -16,7 +17,10 @@ const Button: Component<ButtonProps> = (props) => {
   return (
     <button
       type={props.type || 'button'}
-      class={clsx(s.button, props.class)}
+      class={clsx(s.button, props.class, {
+        [s.primary]: !props.variant || props.variant === 'primary',
+        [s.secondary]: props.variant === 'secondary',
+      })}
       disabled={props.disabled}
       title={props.title}
       aria-label={props.ariaLabel}

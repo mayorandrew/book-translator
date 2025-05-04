@@ -1,0 +1,2869 @@
+{
+  "sentences": [
+    {
+      "original": "Wie sich herausstellte, hatte Jasmin Recht - das Kätzchen war ein „Mädchen\".",
+      "translated": "As it turned out, Jasmin was right - the kitten was a \"girl\".",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Wie",
+              "location": {
+                "start": 0,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": "wie",
+          "translated": "as"
+        },
+        {
+          "parts": [
+            {
+              "text": "sich",
+              "location": {
+                "start": 4,
+                "end": 8
+              }
+            }
+          ],
+          "normalized": "sich",
+          "translated": "itself"
+        },
+        {
+          "parts": [
+            {
+              "text": "herausstellte",
+              "location": {
+                "start": 9,
+                "end": 21
+              }
+            }
+          ],
+          "normalized": "herausstellen",
+          "translated": "turned out"
+        },
+        {
+          "parts": [
+            {
+              "text": "hatte",
+              "location": {
+                "start": 23,
+                "end": 28
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "had"
+        },
+        {
+          "parts": [
+            {
+              "text": "Jasmin",
+              "location": {
+                "start": 29,
+                "end": 35
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin"
+        },
+        {
+          "parts": [
+            {
+              "text": "Recht",
+              "location": {
+                "start": 36,
+                "end": 41
+              }
+            }
+          ],
+          "normalized": "Recht",
+          "translated": "right"
+        },
+        {
+          "parts": [
+            {
+              "text": "-",
+              "location": {
+                "start": 42,
+                "end": 43
+              }
+            }
+          ],
+          "normalized": "-",
+          "translated": "-"
+        },
+        {
+          "parts": [
+            {
+              "text": "das",
+              "location": {
+                "start": 44,
+                "end": 47
+              }
+            }
+          ],
+          "normalized": "das",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Kätzchen",
+              "location": {
+                "start": 48,
+                "end": 56
+              }
+            }
+          ],
+          "normalized": "Kätzchen",
+          "translated": "kitten"
+        },
+        {
+          "parts": [
+            {
+              "text": "war",
+              "location": {
+                "start": 57,
+                "end": 60
+              }
+            }
+          ],
+          "normalized": "sein",
+          "translated": "was"
+        },
+        {
+          "parts": [
+            {
+              "text": "ein",
+              "location": {
+                "start": 61,
+                "end": 64
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "„Mädchen\"",
+              "location": {
+                "start": 65,
+                "end": 74
+              }
+            }
+          ],
+          "normalized": "Mädchen",
+          "translated": "girl"
+        }
+      ]
+    },
+    {
+      "original": "Jasmins Mutter hatte die neue Nachbarin, Helen Murray, zum Kaffee eingeladen.",
+      "translated": "Jasmin's mother had invited the new neighbor, Helen Murray, for coffee.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Jasmins",
+              "location": {
+                "start": 0,
+                "end": 7
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin's"
+        },
+        {
+          "parts": [
+            {
+              "text": "Mutter",
+              "location": {
+                "start": 8,
+                "end": 14
+              }
+            }
+          ],
+          "normalized": "Mutter",
+          "translated": "mother"
+        },
+        {
+          "parts": [
+            {
+              "text": "hatte",
+              "location": {
+                "start": 15,
+                "end": 20
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "had"
+        },
+        {
+          "parts": [
+            {
+              "text": "die",
+              "location": {
+                "start": 21,
+                "end": 24
+              }
+            }
+          ],
+          "normalized": "die",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "neue",
+              "location": {
+                "start": 25,
+                "end": 29
+              }
+            }
+          ],
+          "normalized": "neu",
+          "translated": "new"
+        },
+        {
+          "parts": [
+            {
+              "text": "Nachbarin",
+              "location": {
+                "start": 30,
+                "end": 39
+              }
+            }
+          ],
+          "normalized": "Nachbarin",
+          "translated": "neighbor"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 39,
+                "end": 40
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "Helen",
+              "location": {
+                "start": 41,
+                "end": 46
+              }
+            }
+          ],
+          "normalized": "Helen",
+          "translated": "Helen"
+        },
+        {
+          "parts": [
+            {
+              "text": "Murray",
+              "location": {
+                "start": 47,
+                "end": 53
+              }
+            }
+          ],
+          "normalized": "Murray",
+          "translated": "Murray"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 53,
+                "end": 54
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "zum",
+              "location": {
+                "start": 55,
+                "end": 58
+              }
+            }
+          ],
+          "normalized": "zu dem",
+          "translated": "for"
+        },
+        {
+          "parts": [
+            {
+              "text": "Kaffee",
+              "location": {
+                "start": 59,
+                "end": 65
+              }
+            }
+          ],
+          "normalized": "Kaffee",
+          "translated": "coffee"
+        },
+        {
+          "parts": [
+            {
+              "text": "eingeladen",
+              "location": {
+                "start": 66,
+                "end": 75
+              }
+            }
+          ],
+          "normalized": "einladen",
+          "translated": "invited"
+        }
+      ]
+    },
+    {
+      "original": "Dabei erfuhren sie alles über die hübsche Katze.",
+      "translated": "In doing so, they learned everything about the pretty cat.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Dabei",
+              "location": {
+                "start": 0,
+                "end": 5
+              }
+            }
+          ],
+          "normalized": "dabei",
+          "translated": "in doing so"
+        },
+        {
+          "parts": [
+            {
+              "text": "erfuhren",
+              "location": {
+                "start": 6,
+                "end": 14
+              }
+            }
+          ],
+          "normalized": "erfahren",
+          "translated": "learned"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 15,
+                "end": 18
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "they"
+        },
+        {
+          "parts": [
+            {
+              "text": "alles",
+              "location": {
+                "start": 19,
+                "end": 25
+              }
+            }
+          ],
+          "normalized": "alles",
+          "translated": "everything"
+        },
+        {
+          "parts": [
+            {
+              "text": "über",
+              "location": {
+                "start": 26,
+                "end": 30
+              }
+            }
+          ],
+          "normalized": "über",
+          "translated": "about"
+        },
+        {
+          "parts": [
+            {
+              "text": "die",
+              "location": {
+                "start": 31,
+                "end": 34
+              }
+            }
+          ],
+          "normalized": "die",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "hübsche",
+              "location": {
+                "start": 35,
+                "end": 42
+              }
+            }
+          ],
+          "normalized": "hübsch",
+          "translated": "pretty"
+        },
+        {
+          "parts": [
+            {
+              "text": "Katze",
+              "location": {
+                "start": 43,
+                "end": 48
+              }
+            }
+          ],
+          "normalized": "Katze",
+          "translated": "cat"
+        }
+      ]
+    },
+    {
+      "original": "„Sie heißt Sternchen\", teilte Jasmin ihrer besten Freundin Lara auf dem Nachhauseweg von der Schule mit.",
+      "translated": "\"Her name is Sternchen,\" Jasmin told her best friend Lara on the way home from school.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Sie",
+              "location": {
+                "start": 0,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "heißt",
+              "location": {
+                "start": 4,
+                "end": 10
+              }
+            }
+          ],
+          "normalized": "heißen",
+          "translated": "is called"
+        },
+        {
+          "parts": [
+            {
+              "text": "Sternchen",
+              "location": {
+                "start": 11,
+                "end": 20
+              }
+            }
+          ],
+          "normalized": "Sternchen",
+          "translated": "Sternchen"
+        },
+        {
+          "parts": [
+            {
+              "text": "\",",
+              "location": {
+                "start": 20,
+                "end": 22
+              }
+            }
+          ],
+          "normalized": "\",",
+          "translated": "\""
+        },
+        {
+          "parts": [
+            {
+              "text": "teilte",
+              "location": {
+                "start": 23,
+                "end": 29
+              }
+            }
+          ],
+          "normalized": "teilen",
+          "translated": "told"
+        },
+        {
+          "parts": [
+            {
+              "text": "Jasmin",
+              "location": {
+                "start": 30,
+                "end": 36
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin"
+        },
+        {
+          "parts": [
+            {
+              "text": "ihrer",
+              "location": {
+                "start": 37,
+                "end": 42
+              }
+            }
+          ],
+          "normalized": "ihr",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "besten",
+              "location": {
+                "start": 43,
+                "end": 49
+              }
+            }
+          ],
+          "normalized": "bester",
+          "translated": "best"
+        },
+        {
+          "parts": [
+            {
+              "text": "Freundin",
+              "location": {
+                "start": 50,
+                "end": 58
+              }
+            }
+          ],
+          "normalized": "Freundin",
+          "translated": "friend"
+        },
+        {
+          "parts": [
+            {
+              "text": "Lara",
+              "location": {
+                "start": 59,
+                "end": 63
+              }
+            }
+          ],
+          "normalized": "Lara",
+          "translated": "Lara"
+        },
+        {
+          "parts": [
+            {
+              "text": "auf",
+              "location": {
+                "start": 64,
+                "end": 67
+              }
+            }
+          ],
+          "normalized": "auf",
+          "translated": "on"
+        },
+        {
+          "parts": [
+            {
+              "text": "dem",
+              "location": {
+                "start": 68,
+                "end": 71
+              }
+            }
+          ],
+          "normalized": "der",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Nachhauseweg",
+              "location": {
+                "start": 72,
+                "end": 84
+              }
+            }
+          ],
+          "normalized": "Nachhauseweg",
+          "translated": "way home"
+        },
+        {
+          "parts": [
+            {
+              "text": "von",
+              "location": {
+                "start": 85,
+                "end": 88
+              }
+            }
+          ],
+          "normalized": "von",
+          "translated": "from"
+        },
+        {
+          "parts": [
+            {
+              "text": "der",
+              "location": {
+                "start": 89,
+                "end": 92
+              }
+            }
+          ],
+          "normalized": "die",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Schule",
+              "location": {
+                "start": 93,
+                "end": 99
+              }
+            }
+          ],
+          "normalized": "Schule",
+          "translated": "school"
+        },
+        {
+          "parts": [
+            {
+              "text": "mit",
+              "location": {
+                "start": 100,
+                "end": 103
+              }
+            }
+          ],
+          "normalized": "mit",
+          "translated": "with"
+        }
+      ]
+    },
+    {
+      "original": "„Sie hat sooo süße Tigerstreifen\", schwärmte Jasmin.",
+      "translated": "\"She has such cute tiger stripes,\" raved Jasmin.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Sie",
+              "location": {
+                "start": 0,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "hat",
+              "location": {
+                "start": 4,
+                "end": 7
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "has"
+        },
+        {
+          "parts": [
+            {
+              "text": "sooo",
+              "location": {
+                "start": 8,
+                "end": 12
+              }
+            }
+          ],
+          "normalized": "so",
+          "translated": "such"
+        },
+        {
+          "parts": [
+            {
+              "text": "süße",
+              "location": {
+                "start": 13,
+                "end": 18
+              }
+            }
+          ],
+          "normalized": "süß",
+          "translated": "cute"
+        },
+        {
+          "parts": [
+            {
+              "text": "Tigerstreifen",
+              "location": {
+                "start": 19,
+                "end": 32
+              }
+            }
+          ],
+          "normalized": "Tigerstreifen",
+          "translated": "tiger stripes"
+        },
+        {
+          "parts": [
+            {
+              "text": "\",",
+              "location": {
+                "start": 32,
+                "end": 34
+              }
+            }
+          ],
+          "normalized": "\",",
+          "translated": "\""
+        },
+        {
+          "parts": [
+            {
+              "text": "schwärmte",
+              "location": {
+                "start": 35,
+                "end": 44
+              }
+            }
+          ],
+          "normalized": "schwärmen",
+          "translated": "raved"
+        },
+        {
+          "parts": [
+            {
+              "text": "Jasmin",
+              "location": {
+                "start": 45,
+                "end": 51
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin"
+        }
+      ]
+    },
+    {
+      "original": "„So stelle ich mir meine Traumkatze vor.",
+      "translated": "\"That's how I imagine my dream cat.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "So",
+              "location": {
+                "start": 0,
+                "end": 2
+              }
+            }
+          ],
+          "normalized": "so",
+          "translated": "that's how"
+        },
+        {
+          "parts": [
+            {
+              "text": "stelle",
+              "location": {
+                "start": 3,
+                "end": 8
+              }
+            },
+            {
+              "text": "vor",
+              "location": {
+                "start": 34,
+                "end": 37
+              }
+            }
+          ],
+          "normalized": "vorstellen",
+          "translated": "I imagine"
+        },
+        {
+          "parts": [
+            {
+              "text": "ich",
+              "location": {
+                "start": 9,
+                "end": 12
+              }
+            }
+          ],
+          "normalized": "ich",
+          "translated": "I"
+        },
+        {
+          "parts": [
+            {
+              "text": "mir",
+              "location": {
+                "start": 13,
+                "end": 16
+              }
+            }
+          ],
+          "normalized": "mir",
+          "translated": "myself"
+        },
+        {
+          "parts": [
+            {
+              "text": "meine",
+              "location": {
+                "start": 17,
+                "end": 22
+              }
+            }
+          ],
+          "normalized": "mein",
+          "translated": "my"
+        },
+        {
+          "parts": [
+            {
+              "text": "Traumkatze",
+              "location": {
+                "start": 23,
+                "end": 34
+              }
+            }
+          ],
+          "normalized": "Traumkatze",
+          "translated": "dream cat"
+        }
+      ]
+    },
+    {
+      "original": "So eine wunderschöne Katze möchte ich irgendwann mal haben, weißt du?\"",
+      "translated": "I would like to have such a beautiful cat someday, you know?\"",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "So",
+              "location": {
+                "start": 0,
+                "end": 2
+              }
+            }
+          ],
+          "normalized": "so",
+          "translated": "such"
+        },
+        {
+          "parts": [
+            {
+              "text": "eine",
+              "location": {
+                "start": 3,
+                "end": 7
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "wunderschöne",
+              "location": {
+                "start": 8,
+                "end": 19
+              }
+            }
+          ],
+          "normalized": "wunderschön",
+          "translated": "beautiful"
+        },
+        {
+          "parts": [
+            {
+              "text": "Katze",
+              "location": {
+                "start": 20,
+                "end": 25
+              }
+            }
+          ],
+          "normalized": "Katze",
+          "translated": "cat"
+        },
+        {
+          "parts": [
+            {
+              "text": "möchte",
+              "location": {
+                "start": 26,
+                "end": 32
+              }
+            }
+          ],
+          "normalized": "mögen",
+          "translated": "would like"
+        },
+        {
+          "parts": [
+            {
+              "text": "ich",
+              "location": {
+                "start": 33,
+                "end": 36
+              }
+            }
+          ],
+          "normalized": "ich",
+          "translated": "I"
+        },
+        {
+          "parts": [
+            {
+              "text": "irgendwann",
+              "location": {
+                "start": 37,
+                "end": 46
+              }
+            }
+          ],
+          "normalized": "irgendwann",
+          "translated": "someday"
+        },
+        {
+          "parts": [
+            {
+              "text": "mal",
+              "location": {
+                "start": 47,
+                "end": 50
+              }
+            }
+          ],
+          "normalized": "mal",
+          "translated": "once"
+        },
+        {
+          "parts": [
+            {
+              "text": "haben",
+              "location": {
+                "start": 51,
+                "end": 56
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "have"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 56,
+                "end": 57
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "weißt",
+              "location": {
+                "start": 58,
+                "end": 63
+              }
+            }
+          ],
+          "normalized": "wissen",
+          "translated": "know"
+        },
+        {
+          "parts": [
+            {
+              "text": "du",
+              "location": {
+                "start": 64,
+                "end": 66
+              }
+            }
+          ],
+          "normalized": "du",
+          "translated": "you"
+        },
+        {
+          "parts": [
+            {
+              "text": "?\"",
+              "location": {
+                "start": 66,
+                "end": 68
+              }
+            }
+          ],
+          "normalized": "?",
+          "translated": "?"
+        }
+      ]
+    },
+    {
+      "original": "„Na, da hast du ja Glück, dass sie gleich nebenan wohnt.",
+      "translated": "\"Well, you're lucky that she lives right next door.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Na",
+              "location": {
+                "start": 0,
+                "end": 2
+              }
+            }
+          ],
+          "normalized": "na",
+          "translated": "well"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 2,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "da",
+              "location": {
+                "start": 4,
+                "end": 6
+              }
+            }
+          ],
+          "normalized": "da",
+          "translated": "there"
+        },
+        {
+          "parts": [
+            {
+              "text": "hast",
+              "location": {
+                "start": 7,
+                "end": 11
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "have"
+        },
+        {
+          "parts": [
+            {
+              "text": "du",
+              "location": {
+                "start": 12,
+                "end": 14
+              }
+            }
+          ],
+          "normalized": "du",
+          "translated": "you"
+        },
+        {
+          "parts": [
+            {
+              "text": "ja",
+              "location": {
+                "start": 15,
+                "end": 17
+              }
+            }
+          ],
+          "normalized": "ja",
+          "translated": "indeed"
+        },
+        {
+          "parts": [
+            {
+              "text": "Glück",
+              "location": {
+                "start": 18,
+                "end": 23
+              }
+            }
+          ],
+          "normalized": "Glück",
+          "translated": "luck"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 23,
+                "end": 24
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "dass",
+              "location": {
+                "start": 25,
+                "end": 29
+              }
+            }
+          ],
+          "normalized": "dass",
+          "translated": "that"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 30,
+                "end": 33
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "gleich",
+              "location": {
+                "start": 34,
+                "end": 39
+              }
+            }
+          ],
+          "normalized": "gleich",
+          "translated": "immediately"
+        },
+        {
+          "parts": [
+            {
+              "text": "nebenan",
+              "location": {
+                "start": 40,
+                "end": 47
+              }
+            }
+          ],
+          "normalized": "nebenan",
+          "translated": "next door"
+        },
+        {
+          "parts": [
+            {
+              "text": "wohnt",
+              "location": {
+                "start": 48,
+                "end": 53
+              }
+            }
+          ],
+          "normalized": "wohnen",
+          "translated": "lives"
+        }
+      ]
+    },
+    {
+      "original": "Vielleicht kommt sie ab und zu in euren Garten.\"",
+      "translated": "Maybe she comes to your garden from time to time.\"",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Vielleicht",
+              "location": {
+                "start": 0,
+                "end": 9
+              }
+            }
+          ],
+          "normalized": "vielleicht",
+          "translated": "maybe"
+        },
+        {
+          "parts": [
+            {
+              "text": "kommt",
+              "location": {
+                "start": 10,
+                "end": 16
+              }
+            }
+          ],
+          "normalized": "kommen",
+          "translated": "comes"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 17,
+                "end": 20
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "ab",
+              "location": {
+                "start": 21,
+                "end": 23
+              }
+            }
+          ],
+          "normalized": "ab",
+          "translated": "from"
+        },
+        {
+          "parts": [
+            {
+              "text": "und",
+              "location": {
+                "start": 24,
+                "end": 27
+              }
+            }
+          ],
+          "normalized": "und",
+          "translated": "and"
+        },
+        {
+          "parts": [
+            {
+              "text": "zu",
+              "location": {
+                "start": 28,
+                "end": 30
+              }
+            }
+          ],
+          "normalized": "zu",
+          "translated": "to"
+        },
+        {
+          "parts": [
+            {
+              "text": "in",
+              "location": {
+                "start": 31,
+                "end": 33
+              }
+            }
+          ],
+          "normalized": "in",
+          "translated": "in"
+        },
+        {
+          "parts": [
+            {
+              "text": "euren",
+              "location": {
+                "start": 34,
+                "end": 39
+              }
+            }
+          ],
+          "normalized": "euer",
+          "translated": "your"
+        },
+        {
+          "parts": [
+            {
+              "text": "Garten",
+              "location": {
+                "start": 40,
+                "end": 46
+              }
+            }
+          ],
+          "normalized": "Garten",
+          "translated": "garden"
+        },
+        {
+          "parts": [
+            {
+              "text": ".\"",
+              "location": {
+                "start": 46,
+                "end": 48
+              }
+            }
+          ],
+          "normalized": "\"",
+          "translated": "\""
+        }
+      ]
+    },
+    {
+      "original": "Lara war ein wenig neidisch.",
+      "translated": "Lara was a little jealous.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Lara",
+              "location": {
+                "start": 0,
+                "end": 4
+              }
+            }
+          ],
+          "normalized": "Lara",
+          "translated": "Lara"
+        },
+        {
+          "parts": [
+            {
+              "text": "war",
+              "location": {
+                "start": 5,
+                "end": 8
+              }
+            }
+          ],
+          "normalized": "sein",
+          "translated": "was"
+        },
+        {
+          "parts": [
+            {
+              "text": "ein",
+              "location": {
+                "start": 9,
+                "end": 12
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "wenig",
+              "location": {
+                "start": 13,
+                "end": 18
+              }
+            }
+          ],
+          "normalized": "wenig",
+          "translated": "little"
+        },
+        {
+          "parts": [
+            {
+              "text": "neidisch",
+              "location": {
+                "start": 19,
+                "end": 26
+              }
+            }
+          ],
+          "normalized": "neidisch",
+          "translated": "jealous"
+        }
+      ]
+    },
+    {
+      "original": "„Weißt du, wie alt sie ist?\"",
+      "translated": "\"Do you know how old she is?\"",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Weißt",
+              "location": {
+                "start": 0,
+                "end": 5
+              }
+            }
+          ],
+          "normalized": "wissen",
+          "translated": "do know"
+        },
+        {
+          "parts": [
+            {
+              "text": "du",
+              "location": {
+                "start": 6,
+                "end": 8
+              }
+            }
+          ],
+          "normalized": "du",
+          "translated": "you"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 8,
+                "end": 9
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "wie",
+              "location": {
+                "start": 10,
+                "end": 13
+              }
+            }
+          ],
+          "normalized": "wie",
+          "translated": "how"
+        },
+        {
+          "parts": [
+            {
+              "text": "alt",
+              "location": {
+                "start": 14,
+                "end": 17
+              }
+            }
+          ],
+          "normalized": "alt",
+          "translated": "old"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 18,
+                "end": 21
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "ist",
+              "location": {
+                "start": 22,
+                "end": 25
+              }
+            }
+          ],
+          "normalized": "sein",
+          "translated": "is"
+        },
+        {
+          "parts": [
+            {
+              "text": "?\"",
+              "location": {
+                "start": 25,
+                "end": 27
+              }
+            }
+          ],
+          "normalized": "?",
+          "translated": "?"
+        }
+      ]
+    },
+    {
+      "original": "„Fast drei Monate.",
+      "translated": "\"Almost three months.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Fast",
+              "location": {
+                "start": 0,
+                "end": 4
+              }
+            }
+          ],
+          "normalized": "fast",
+          "translated": "almost"
+        },
+        {
+          "parts": [
+            {
+              "text": "drei",
+              "location": {
+                "start": 5,
+                "end": 9
+              }
+            }
+          ],
+          "normalized": "drei",
+          "translated": "three"
+        },
+        {
+          "parts": [
+            {
+              "text": "Monate",
+              "location": {
+                "start": 10,
+                "end": 16
+              }
+            }
+          ],
+          "normalized": "Monat",
+          "translated": "months"
+        }
+      ]
+    },
+    {
+      "original": "Unsere Nachbarn haben sie von einer Freundin, deren Katze Junge bekommen hat.",
+      "translated": "Our neighbors got her from a friend whose cat had kittens.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Unsere",
+              "location": {
+                "start": 0,
+                "end": 6
+              }
+            }
+          ],
+          "normalized": "unser",
+          "translated": "our"
+        },
+        {
+          "parts": [
+            {
+              "text": "Nachbarn",
+              "location": {
+                "start": 7,
+                "end": 15
+              }
+            }
+          ],
+          "normalized": "Nachbar",
+          "translated": "neighbors"
+        },
+        {
+          "parts": [
+            {
+              "text": "haben",
+              "location": {
+                "start": 16,
+                "end": 21
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "have"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 22,
+                "end": 25
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "von",
+              "location": {
+                "start": 26,
+                "end": 29
+              }
+            }
+          ],
+          "normalized": "von",
+          "translated": "from"
+        },
+        {
+          "parts": [
+            {
+              "text": "einer",
+              "location": {
+                "start": 30,
+                "end": 35
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "Freundin",
+              "location": {
+                "start": 36,
+                "end": 44
+              }
+            }
+          ],
+          "normalized": "Freundin",
+          "translated": "friend"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 44,
+                "end": 45
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "deren",
+              "location": {
+                "start": 46,
+                "end": 51
+              }
+            }
+          ],
+          "normalized": "deren",
+          "translated": "whose"
+        },
+        {
+          "parts": [
+            {
+              "text": "Katze",
+              "location": {
+                "start": 52,
+                "end": 57
+              }
+            }
+          ],
+          "normalized": "Katze",
+          "translated": "cat"
+        },
+        {
+          "parts": [
+            {
+              "text": "Junge",
+              "location": {
+                "start": 58,
+                "end": 63
+              }
+            }
+          ],
+          "normalized": "Junges",
+          "translated": "kittens"
+        },
+        {
+          "parts": [
+            {
+              "text": "bekommen",
+              "location": {
+                "start": 64,
+                "end": 71
+              }
+            }
+          ],
+          "normalized": "bekommen",
+          "translated": "had"
+        },
+        {
+          "parts": [
+            {
+              "text": "hat",
+              "location": {
+                "start": 72,
+                "end": 75
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "has"
+        }
+      ]
+    },
+    {
+      "original": "Sie waren ein bisschen besorgt, wie die Katze den Umzug überstehen würde, aber der hat ihr gar nichts ausgemacht.",
+      "translated": "They were a little worried about how the cat would cope with the move, but it didn't bother her at all.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Sie",
+              "location": {
+                "start": 0,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "they"
+        },
+        {
+          "parts": [
+            {
+              "text": "waren",
+              "location": {
+                "start": 4,
+                "end": 9
+              }
+            }
+          ],
+          "normalized": "sein",
+          "translated": "were"
+        },
+        {
+          "parts": [
+            {
+              "text": "ein",
+              "location": {
+                "start": 10,
+                "end": 13
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "bisschen",
+              "location": {
+                "start": 14,
+                "end": 21
+              }
+            }
+          ],
+          "normalized": "bisschen",
+          "translated": "little"
+        },
+        {
+          "parts": [
+            {
+              "text": "besorgt",
+              "location": {
+                "start": 22,
+                "end": 29
+              }
+            }
+          ],
+          "normalized": "besorgt",
+          "translated": "worried"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 29,
+                "end": 30
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "wie",
+              "location": {
+                "start": 31,
+                "end": 34
+              }
+            }
+          ],
+          "normalized": "wie",
+          "translated": "how"
+        },
+        {
+          "parts": [
+            {
+              "text": "die",
+              "location": {
+                "start": 35,
+                "end": 38
+              }
+            }
+          ],
+          "normalized": "die",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Katze",
+              "location": {
+                "start": 39,
+                "end": 44
+              }
+            }
+          ],
+          "normalized": "Katze",
+          "translated": "cat"
+        },
+        {
+          "parts": [
+            {
+              "text": "den",
+              "location": {
+                "start": 45,
+                "end": 48
+              }
+            }
+          ],
+          "normalized": "der",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Umzug",
+              "location": {
+                "start": 49,
+                "end": 55
+              }
+            }
+          ],
+          "normalized": "Umzug",
+          "translated": "move"
+        },
+        {
+          "parts": [
+            {
+              "text": "überstehen",
+              "location": {
+                "start": 56,
+                "end": 67
+              }
+            }
+          ],
+          "normalized": "überstehen",
+          "translated": "cope"
+        },
+        {
+          "parts": [
+            {
+              "text": "würde",
+              "location": {
+                "start": 68,
+                "end": 73
+              }
+            }
+          ],
+          "normalized": "werden",
+          "translated": "would"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 73,
+                "end": 74
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "aber",
+              "location": {
+                "start": 75,
+                "end": 79
+              }
+            }
+          ],
+          "normalized": "aber",
+          "translated": "but"
+        },
+        {
+          "parts": [
+            {
+              "text": "der",
+              "location": {
+                "start": 80,
+                "end": 83
+              }
+            }
+          ],
+          "normalized": "der",
+          "translated": "it"
+        },
+        {
+          "parts": [
+            {
+              "text": "hat",
+              "location": {
+                "start": 84,
+                "end": 87
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "did"
+        },
+        {
+          "parts": [
+            {
+              "text": "ihr",
+              "location": {
+                "start": 88,
+                "end": 91
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "gar",
+              "location": {
+                "start": 92,
+                "end": 95
+              }
+            }
+          ],
+          "normalized": "gar",
+          "translated": "at all"
+        },
+        {
+          "parts": [
+            {
+              "text": "nichts",
+              "location": {
+                "start": 96,
+                "end": 102
+              }
+            }
+          ],
+          "normalized": "nichts",
+          "translated": "nothing"
+        },
+        {
+          "parts": [
+            {
+              "text": "ausgemacht",
+              "location": {
+                "start": 103,
+                "end": 113
+              }
+            }
+          ],
+          "normalized": "ausmachen",
+          "translated": "bothered"
+        }
+      ]
+    },
+    {
+      "original": "Sie möchte nur so gern nach draußen!",
+      "translated": "She just really wants to go outside!",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Sie",
+              "location": {
+                "start": 0,
+                "end": 3
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "möchte",
+              "location": {
+                "start": 4,
+                "end": 10
+              }
+            }
+          ],
+          "normalized": "mögen",
+          "translated": "wants"
+        },
+        {
+          "parts": [
+            {
+              "text": "nur",
+              "location": {
+                "start": 11,
+                "end": 14
+              }
+            }
+          ],
+          "normalized": "nur",
+          "translated": "only/just"
+        },
+        {
+          "parts": [
+            {
+              "text": "so",
+              "location": {
+                "start": 15,
+                "end": 17
+              }
+            }
+          ],
+          "normalized": "so",
+          "translated": "so"
+        },
+        {
+          "parts": [
+            {
+              "text": "gern",
+              "location": {
+                "start": 18,
+                "end": 22
+              }
+            }
+          ],
+          "normalized": "gern",
+          "translated": "gladly/really"
+        },
+        {
+          "parts": [
+            {
+              "text": "nach",
+              "location": {
+                "start": 23,
+                "end": 27
+              }
+            }
+          ],
+          "normalized": "nach",
+          "translated": "to"
+        },
+        {
+          "parts": [
+            {
+              "text": "draußen",
+              "location": {
+                "start": 28,
+                "end": 35
+              }
+            }
+          ],
+          "normalized": "draußen",
+          "translated": "outside"
+        }
+      ]
+    },
+    {
+      "original": "„Sie hat noch nicht alle Impfungen bekommen, das dauert noch ein paar Wochen. Bis morgen!\", rief Jasmin, als sie vor ihrem Haus stand.",
+      "translated": "\"She has not received all the vaccinations yet, it will take a few more weeks. See you tomorrow!\", called Jasmin as she stood in front of her house.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "„Sie",
+              "location": {
+                "start": 0,
+                "end": 4
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "hat",
+              "location": {
+                "start": 5,
+                "end": 8
+              }
+            }
+          ],
+          "normalized": "haben",
+          "translated": "has"
+        },
+        {
+          "parts": [
+            {
+              "text": "noch",
+              "location": {
+                "start": 9,
+                "end": 13
+              }
+            }
+          ],
+          "normalized": "noch",
+          "translated": "not yet"
+        },
+        {
+          "parts": [
+            {
+              "text": "nicht",
+              "location": {
+                "start": 14,
+                "end": 19
+              }
+            }
+          ],
+          "normalized": "nicht",
+          "translated": "not"
+        },
+        {
+          "parts": [
+            {
+              "text": "alle",
+              "location": {
+                "start": 20,
+                "end": 24
+              }
+            }
+          ],
+          "normalized": "alle",
+          "translated": "all"
+        },
+        {
+          "parts": [
+            {
+              "text": "Impfungen",
+              "location": {
+                "start": 25,
+                "end": 34
+              }
+            }
+          ],
+          "normalized": "Impfung",
+          "translated": "vaccinations"
+        },
+        {
+          "parts": [
+            {
+              "text": "bekommen",
+              "location": {
+                "start": 35,
+                "end": 43
+              }
+            }
+          ],
+          "normalized": "bekommen",
+          "translated": "received"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 43,
+                "end": 44
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "das",
+              "location": {
+                "start": 45,
+                "end": 48
+              }
+            }
+          ],
+          "normalized": "das",
+          "translated": "that"
+        },
+        {
+          "parts": [
+            {
+              "text": "dauert",
+              "location": {
+                "start": 49,
+                "end": 55
+              }
+            }
+          ],
+          "normalized": "dauern",
+          "translated": "will take"
+        },
+        {
+          "parts": [
+            {
+              "text": "noch",
+              "location": {
+                "start": 56,
+                "end": 60
+              }
+            }
+          ],
+          "normalized": "noch",
+          "translated": "still"
+        },
+        {
+          "parts": [
+            {
+              "text": "ein",
+              "location": {
+                "start": 61,
+                "end": 64
+              }
+            }
+          ],
+          "normalized": "ein",
+          "translated": "a"
+        },
+        {
+          "parts": [
+            {
+              "text": "paar",
+              "location": {
+                "start": 65,
+                "end": 69
+              }
+            }
+          ],
+          "normalized": "paar",
+          "translated": "few"
+        },
+        {
+          "parts": [
+            {
+              "text": "Wochen",
+              "location": {
+                "start": 70,
+                "end": 76
+              }
+            }
+          ],
+          "normalized": "Woche",
+          "translated": "weeks"
+        },
+        {
+          "parts": [
+            {
+              "text": ".",
+              "location": {
+                "start": 76,
+                "end": 77
+              }
+            }
+          ],
+          "normalized": ".",
+          "translated": "."
+        },
+        {
+          "parts": [
+            {
+              "text": "Bis",
+              "location": {
+                "start": 78,
+                "end": 81
+              }
+            }
+          ],
+          "normalized": "bis",
+          "translated": "see"
+        },
+        {
+          "parts": [
+            {
+              "text": "morgen",
+              "location": {
+                "start": 82,
+                "end": 88
+              }
+            }
+          ],
+          "normalized": "morgen",
+          "translated": "you tomorrow"
+        },
+        {
+          "parts": [
+            {
+              "text": "!\"",
+              "location": {
+                "start": 88,
+                "end": 90
+              }
+            }
+          ],
+          "normalized": "!",
+          "translated": "!"
+        },
+        {
+          "parts": [
+            {
+              "text": "rief",
+              "location": {
+                "start": 91,
+                "end": 95
+              }
+            }
+          ],
+          "normalized": "rufen",
+          "translated": "called"
+        },
+        {
+          "parts": [
+            {
+              "text": "Jasmin",
+              "location": {
+                "start": 96,
+                "end": 102
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 102,
+                "end": 103
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "als",
+              "location": {
+                "start": 104,
+                "end": 107
+              }
+            }
+          ],
+          "normalized": "als",
+          "translated": "as"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 108,
+                "end": 111
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "vor",
+              "location": {
+                "start": 112,
+                "end": 115
+              }
+            }
+          ],
+          "normalized": "vor",
+          "translated": "in front of"
+        },
+        {
+          "parts": [
+            {
+              "text": "ihrem",
+              "location": {
+                "start": 116,
+                "end": 121
+              }
+            }
+          ],
+          "normalized": "ihr",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "Haus",
+              "location": {
+                "start": 122,
+                "end": 126
+              }
+            }
+          ],
+          "normalized": "Haus",
+          "translated": "house"
+        },
+        {
+          "parts": [
+            {
+              "text": "stand",
+              "location": {
+                "start": 127,
+                "end": 132
+              }
+            }
+          ],
+          "normalized": "stehen",
+          "translated": "stood"
+        }
+      ]
+    },
+    {
+      "original": "Während der nächsten Wochen hielt Jasmin jedes Mal nach Sternchen Ausschau, wenn sie am Nachbarhaus vorbeiging, und winkte ihr zu, wenn sie sie sah.",
+      "translated": "During the next weeks, Jasmin looked out for Sternchen every time she passed the neighbor's house and waved to her when she saw her.",
+      "words": [
+        {
+          "parts": [
+            {
+              "text": "Während",
+              "location": {
+                "start": 0,
+                "end": 7
+              }
+            }
+          ],
+          "normalized": "während",
+          "translated": "during"
+        },
+        {
+          "parts": [
+            {
+              "text": "der",
+              "location": {
+                "start": 8,
+                "end": 11
+              }
+            }
+          ],
+          "normalized": "der",
+          "translated": "the"
+        },
+        {
+          "parts": [
+            {
+              "text": "nächsten",
+              "location": {
+                "start": 12,
+                "end": 20
+              }
+            }
+          ],
+          "normalized": "nächsten",
+          "translated": "next"
+        },
+        {
+          "parts": [
+            {
+              "text": "Wochen",
+              "location": {
+                "start": 21,
+                "end": 27
+              }
+            }
+          ],
+          "normalized": "Woche",
+          "translated": "weeks"
+        },
+        {
+          "parts": [
+            {
+              "text": "hielt",
+              "location": {
+                "start": 28,
+                "end": 33
+              }
+            }
+          ],
+          "normalized": "halten",
+          "translated": "looked out"
+        },
+        {
+          "parts": [
+            {
+              "text": "Jasmin",
+              "location": {
+                "start": 34,
+                "end": 40
+              }
+            }
+          ],
+          "normalized": "Jasmin",
+          "translated": "Jasmin"
+        },
+        {
+          "parts": [
+            {
+              "text": "jedes",
+              "location": {
+                "start": 41,
+                "end": 46
+              }
+            }
+          ],
+          "normalized": "jeder",
+          "translated": "every"
+        },
+        {
+          "parts": [
+            {
+              "text": "Mal",
+              "location": {
+                "start": 47,
+                "end": 50
+              }
+            }
+          ],
+          "normalized": "Mal",
+          "translated": "time"
+        },
+        {
+          "parts": [
+            {
+              "text": "nach",
+              "location": {
+                "start": 51,
+                "end": 55
+              }
+            }
+          ],
+          "normalized": "nach",
+          "translated": "for"
+        },
+        {
+          "parts": [
+            {
+              "text": "Sternchen",
+              "location": {
+                "start": 56,
+                "end": 65
+              }
+            }
+          ],
+          "normalized": "Sternchen",
+          "translated": "Sternchen"
+        },
+        {
+          "parts": [
+            {
+              "text": "Ausschau",
+              "location": {
+                "start": 66,
+                "end": 73
+              }
+            }
+          ],
+          "normalized": "Ausschau",
+          "translated": "look out"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 73,
+                "end": 74
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "wenn",
+              "location": {
+                "start": 75,
+                "end": 79
+              }
+            }
+          ],
+          "normalized": "wenn",
+          "translated": "when"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 80,
+                "end": 83
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "am",
+              "location": {
+                "start": 84,
+                "end": 86
+              }
+            }
+          ],
+          "normalized": "an dem",
+          "translated": "at the"
+        },
+        {
+          "parts": [
+            {
+              "text": "Nachbarhaus",
+              "location": {
+                "start": 87,
+                "end": 98
+              }
+            }
+          ],
+          "normalized": "Nachbarhaus",
+          "translated": "neighbor's house"
+        },
+        {
+          "parts": [
+            {
+              "text": "vorbeiging",
+              "location": {
+                "start": 99,
+                "end": 109
+              }
+            }
+          ],
+          "normalized": "vorbeigehen",
+          "translated": "passed"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 109,
+                "end": 110
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "und",
+              "location": {
+                "start": 111,
+                "end": 114
+              }
+            }
+          ],
+          "normalized": "und",
+          "translated": "and"
+        },
+        {
+          "parts": [
+            {
+              "text": "winkte",
+              "location": {
+                "start": 115,
+                "end": 121
+              }
+            }
+          ],
+          "normalized": "winken",
+          "translated": "waved"
+        },
+        {
+          "parts": [
+            {
+              "text": "ihr",
+              "location": {
+                "start": 122,
+                "end": 125
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "to her"
+        },
+        {
+          "parts": [
+            {
+              "text": "zu",
+              "location": {
+                "start": 126,
+                "end": 128
+              }
+            }
+          ],
+          "normalized": "zu",
+          "translated": "to"
+        },
+        {
+          "parts": [
+            {
+              "text": ",",
+              "location": {
+                "start": 128,
+                "end": 129
+              }
+            }
+          ],
+          "normalized": ",",
+          "translated": ","
+        },
+        {
+          "parts": [
+            {
+              "text": "wenn",
+              "location": {
+                "start": 130,
+                "end": 134
+              }
+            }
+          ],
+          "normalized": "wenn",
+          "translated": "when"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 135,
+                "end": 138
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "she"
+        },
+        {
+          "parts": [
+            {
+              "text": "sie",
+              "location": {
+                "start": 139,
+                "end": 142
+              }
+            }
+          ],
+          "normalized": "sie",
+          "translated": "her"
+        },
+        {
+          "parts": [
+            {
+              "text": "sah",
+              "location": {
+                "start": 143,
+                "end": 146
+              }
+            }
+          ],
+          "normalized": "sehen",
+          "translated": "saw"
+        },
+        {
+          "parts": [
+            {
+              "text": ".",
+              "location": {
+                "start": 146,
+                "end": 147
+              }
+            }
+          ],
+          "normalized": ".",
+          "translated": "."
+        }
+      ]
+    }
+  ]
+}

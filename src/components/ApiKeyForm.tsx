@@ -1,15 +1,19 @@
 import { Component } from 'solid-js';
-import { setOpenaiApiKey } from '../data/openai';
 import s from './ApiKeyForm.module.css';
 import Button from './ui/Button';
 
-const ApiKeyForm: Component = () => {
+export interface ApiKeyFormProps {
+  onSetApiKey: (apiKey: string) => void;
+  onChooseDemoMode: () => void;
+}
+
+const ApiKeyForm: Component<ApiKeyFormProps> = (props) => {
   const handleSubmit = (e: Event) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const apiKey = formData.get('apiKey') as string;
-    setOpenaiApiKey(apiKey);
+    props.onSetApiKey(apiKey);
   };
 
   return (
@@ -29,9 +33,10 @@ const ApiKeyForm: Component = () => {
               class={s.input}
             />
           </div>
-          <Button type="submit">
-            Save API Key
-          </Button>
+          <div class={s.buttons}>
+            <Button variant="secondary" type="button" onClick={props.onChooseDemoMode}>Demo mode</Button>
+            <Button type="submit">Save API Key</Button>
+          </div>
         </form>
         <p class={s.note}>
           Your API key is stored locally in your browser and never sent to our
