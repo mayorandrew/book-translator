@@ -2,10 +2,9 @@ import { createSignal } from 'solid-js';
 import OpenAI from 'openai';
 import { makePersisted } from '@solid-primitives/storage';
 
-const [apiKey, setApiKey] = makePersisted(
-  createSignal<string | null>(null),
-  { name: 'openai-api-key' },
-);
+const [apiKey, setApiKey] = makePersisted(createSignal<string | null>(null), {
+  name: 'openai-api-key',
+});
 
 const client = () => {
   const key = apiKey();
@@ -19,4 +18,4 @@ const client = () => {
   });
 };
 
-export const [openaiClient] = createSignal({ setApiKey, client });
+export const openaiClient = { setApiKey, client };

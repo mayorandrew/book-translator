@@ -1,8 +1,8 @@
-import { createSignal } from 'solid-js';
 import example from './textTranslationLlmDemoResponse.json';
 import * as ixao from 'ix/asynciterable/operators';
+import { TextTranslationLlm } from './textTranslationLlm';
 
-export const [textTranslationLlmDemo] = createSignal({
+export const textTranslationLlmDemo: TextTranslationLlm = {
   streamTranslations: (
     text: string,
     targetLanguage: string,
@@ -21,4 +21,4 @@ export const [textTranslationLlmDemo] = createSignal({
 
     return ixao.wrapWithAbort(fetchDemo(), signal);
   },
-});
+};

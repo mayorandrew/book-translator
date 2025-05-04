@@ -10,7 +10,7 @@ import { ThemeProvider } from './utils/ThemeContext';
 import { demoMode } from './data/demoMode';
 
 const BookTranslator: Component = () => {
-  const data = translationsStore().state;
+  const data = translationsStore.state;
   const [abortController, setAbortController] =
     createSignal<AbortController | null>(null);
 
@@ -23,7 +23,7 @@ const BookTranslator: Component = () => {
       return controller;
     });
 
-    return textTranslationService().translateText(
+    return textTranslationService.translateText(
       text,
       targetLanguage,
       controller.signal,
@@ -36,15 +36,15 @@ const BookTranslator: Component = () => {
       setAbortController(null);
     }
 
-    translationsStore().clear();
+    translationsStore.clear();
   };
 
   return (
     <>
-      {!openaiClient().client() && !demoMode().isDemo() ? (
+      {!openaiClient.client() && !demoMode.isDemo() ? (
         <ApiKeyForm
-          onSetApiKey={(apiKey) => openaiClient().setApiKey(apiKey)}
-          onChooseDemoMode={() => demoMode().setIsDemo(true)}
+          onSetApiKey={(apiKey) => openaiClient.setApiKey(apiKey)}
+          onChooseDemoMode={() => demoMode.setIsDemo(true)}
         />
       ) : data.sentences.length > 0 ? (
         <TranslationResults

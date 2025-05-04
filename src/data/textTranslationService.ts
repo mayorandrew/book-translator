@@ -4,24 +4,23 @@ import { APIUserAbortError } from 'openai';
 import { splitTextIntoBatches } from '../utils/splitTextIntoBatches';
 import { jsonParse } from '../utils/jsonParse';
 import { translationsStore } from './translationsStore';
-import { createSignal } from 'solid-js';
 import { zSentence } from './textTranslationResponse';
 import { textTranslationLlmOpenai } from './textTranslationLlmOpenai';
 import { textTranslationLlmDemo } from './textTranslationLlmDemo';
 import { demoMode } from './demoMode';
+import { TextTranslationLlm } from './textTranslationLlm';
 
-const translateTextLlm = () =>
-  demoMode().isDemo() ? textTranslationLlmDemo() : textTranslationLlmOpenai();
+const translateTextLlm = (): TextTranslationLlm =>
+  demoMode.isDemo() ? textTranslationLlmDemo : textTranslationLlmOpenai;
 
 const translateText = async (
   text: string,
   targetLanguage: string,
   signal?: AbortSignal,
 ): Promise<void> => {
-  const translationsStore1 = translationsStore();
-  const translateTextLlmProvider1 = translateTextLlm();
+  const llm = translateTextLlm();
 
-  translationsStore1.setLoading(true);
+  translationsStore.setLoading(true);
   try {
     const batches = splitTextIntoBatches(text, 1000);
     console.log('Batches', batches);
@@ -30,11 +29,7 @@ const translateText = async (
       ixao.concatMap((batch, iBatch, signal) => {
         console.log('Requesting batch', batch);
 
-        const stream = translateTextLlmProvider1.streamTranslations(
-          batch,
-          targetLanguage,
-          signal,
-        );
+        const stream = llm.streamTranslations(batch, targetLanguage, signal);
 
         return ixa.from(stream).pipe(
           jsonParse(),
@@ -57,12 +52,12 @@ const translateText = async (
 
     for await (const item of ixao.wrapWithAbort(translationsIterable, signal)) {
       console.log('Item', item);
-      translationsStore1.add(item);
+      translationsStore.add(item);
     }
 
     console.log(
       'Final result',
-      JSON.stringify(translationsStore1.state.sentences),
+      JSON.stringify(translationsStore.state.sentences),
     );
   } catch (error) {
     if (error instanceof APIUserAbortError) {
@@ -71,10 +66,10 @@ const translateText = async (
 
     console.error('Translation fetching error:', error);
   } finally {
-    translationsStore1.setLoading(false);
+    translationsStore.setLoading(false);
   }
 };
 
-export const [textTranslationService] = createSignal({
+export const textTranslationService = {
   translateText,
-});
+};

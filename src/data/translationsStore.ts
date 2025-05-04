@@ -33,7 +33,7 @@ const [store, setStore] = createStore<TranslationsState>({
   sentences: [],
 });
 
-export const [translationsStore] = createSignal({
+export const translationsStore = {
   state: store,
   add: (...translation: Sentence[]) => {
     setStore('sentences', (prev) => [...prev, ...translation]);
@@ -47,4 +47,4 @@ export const [translationsStore] = createSignal({
   setLoading: (loading: boolean) => {
     setStore('loading', loading);
   },
-});
+};

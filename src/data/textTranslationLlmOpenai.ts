@@ -3,10 +3,10 @@ import {
   TextTranslation,
   zTextTranslationResponse,
 } from './textTranslationResponse';
-import { createSignal } from 'solid-js';
 import { openaiClient } from './openaiClient';
 import * as ixa from 'ix/asynciterable';
 import * as ixao from 'ix/asynciterable/operators';
+import { TextTranslationLlm } from './textTranslationLlm';
 
 export const jTextTranslationResponse = zodTextFormat(
   zTextTranslationResponse,
@@ -109,13 +109,13 @@ export const exampleResult: TextTranslation = {
   ],
 };
 
-export const [textTranslationLlmOpenai] = createSignal({
+export const textTranslationLlmOpenai: TextTranslationLlm = {
   streamTranslations: (
     text: string,
     targetLanguage: string,
     signal?: AbortSignal,
   ): AsyncIterable<string> => {
-    const client = openaiClient().client();
+    const client = openaiClient.client();
     if (!client) {
       console.error('OpenAI client not initialized');
       return ixa.from([]);
@@ -155,4 +155,4 @@ export const [textTranslationLlmOpenai] = createSignal({
       ixao.map((chunk) => chunk.delta),
     );
   },
-});
+};
