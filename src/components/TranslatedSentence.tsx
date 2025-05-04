@@ -45,12 +45,14 @@ const TranslatedSentence: Component<TranslatedSentenceProps> = (props) => {
         result.push(text.substring(index, nextLoc.start));
       }
 
+      const start = Math.max(index, nextLoc.start);
+
       result.push(
         <span
           class={s.translatedWord}
           title={`${nextLoc.combined} (${nextLoc.word.normalized}) — ${nextLoc.word.translated}`}
         >
-          {text.substring(nextLoc.start, nextLoc.end + 1)}
+          {text.substring(start, nextLoc.end + 1)}
         </span>,
       );
 

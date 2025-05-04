@@ -56,13 +56,109 @@ const zTranslation = z.object({
     ),
 });
 
-type Translation = z.infer<typeof zTranslation>;
-
 const zTranslations = z.object({
   translations: z.array(zTranslation),
 });
 
+type Translations = z.infer<typeof zTranslations>;
+
 const jTranslations = zodTextFormat(zTranslations, 'translations_response');
+
+const exampleResult: Translations = {
+  translations: [
+    {
+      original: 'So stelle ich mir meine Traumkatze vor.',
+      translated: 'Так я себе представляю мою кошку мечты.',
+      words: [
+        {
+          parts: [
+            {
+              text: 'So',
+              location: {
+                start: 0,
+                end: 2,
+              },
+            },
+          ],
+          normalized: 'so',
+          translated: 'так',
+        },
+        {
+          parts: [
+            {
+              text: 'stelle',
+              location: {
+                start: 3,
+                end: 8,
+              },
+            },
+            {
+              text: 'vor',
+              location: {
+                start: 35,
+                end: 38,
+              },
+            },
+          ],
+          normalized: 'vorstellen',
+          translated: 'представляю',
+        },
+        {
+          parts: [
+            {
+              text: 'ich',
+              location: {
+                start: 10,
+                end: 13,
+              },
+            },
+          ],
+          normalized: 'ich',
+          translated: 'я',
+        },
+        {
+          parts: [
+            {
+              text: 'mir',
+              location: {
+                start: 14,
+                end: 17,
+              },
+            },
+          ],
+          normalized: 'ich',
+          translated: 'мне',
+        },
+        {
+          parts: [
+            {
+              text: 'meine',
+              location: {
+                start: 18,
+                end: 23,
+              },
+            },
+          ],
+          normalized: 'mein',
+          translated: 'мою',
+        },
+        {
+          parts: [
+            {
+              text: 'Traumkatze',
+              location: {
+                start: 24,
+                end: 34,
+              },
+            },
+          ],
+          normalized: 'Traumkatze',
+          translated: 'кошку мечты',
+        },
+      ],
+    },
+  ],
+};
 
 export const translateText = async (
   text: string,
@@ -77,10 +173,13 @@ export const translateText = async (
 
   translations.setLoading(true);
   try {
-    const batches = splitTextIntoBatches(text, 10000);
+    const batches = splitTextIntoBatches(text, 1000);
+    console.log('Batches', batches);
 
     const translationsIterable = ixa.from(batches).pipe(
       ixao.concatMap((batch, iBatch, signal) => {
+        console.log('Requesting batch', batch);
+
         const stream = client.responses.stream(
           {
             model: 'gpt-4.1-mini',
@@ -92,102 +191,12 @@ export const translateText = async (
                   Also include all of the words of the original sentence along with their translations and locations in the "words" fields. 
                   If a word has a separable prefix, collect all parts together under a single word. 
                   The location indexes should be relative to the sentence, not the entire text.
+                  Do not stop until all sentences are printed out.
                   
                   For example, if the target language is "ru" and the original sentence is:
                   "So stelle ich mir meine Traumkatze vor."
-                  
                   The the result would be:
-                  ${JSON.stringify({
-                    original: 'So stelle ich mir meine Traumkatze vor.',
-                    translated: 'Так я себе представляю мою кошку мечты.',
-                    words: [
-                      {
-                        parts: [
-                          {
-                            text: 'So',
-                            location: {
-                              start: 0,
-                              end: 2,
-                            },
-                          },
-                        ],
-                        normalized: 'so',
-                        translated: 'так',
-                      },
-                      {
-                        parts: [
-                          {
-                            text: 'stelle',
-                            location: {
-                              start: 3,
-                              end: 8,
-                            },
-                          },
-                          {
-                            text: 'vor',
-                            location: {
-                              start: 35,
-                              end: 38,
-                            },
-                          },
-                        ],
-                        normalized: 'vorstellen',
-                        translated: 'представляю',
-                      },
-                      {
-                        parts: [
-                          {
-                            text: 'ich',
-                            location: {
-                              start: 10,
-                              end: 13,
-                            },
-                          },
-                        ],
-                        normalized: 'ich',
-                        translated: 'я',
-                      },
-                      {
-                        parts: [
-                          {
-                            text: 'mir',
-                            location: {
-                              start: 14,
-                              end: 17,
-                            },
-                          },
-                        ],
-                        normalized: 'ich',
-                        translated: 'мне',
-                      },
-                      {
-                        parts: [
-                          {
-                            text: 'meine',
-                            location: {
-                              start: 18,
-                              end: 23,
-                            },
-                          },
-                        ],
-                        normalized: 'mein',
-                        translated: 'мою',
-                      },
-                      {
-                        parts: [
-                          {
-                            text: 'Traumkatze',
-                            location: {
-                              start: 24,
-                              end: 34,
-                            },
-                          },
-                        ],
-                        normalized: 'Traumkatze',
-                        translated: 'кошку мечты',
-                      },
-                    ],
-                  } satisfies Translation)}
+                  ${JSON.stringify(exampleResult)}
                   `,
               },
               {
@@ -200,13 +209,16 @@ export const translateText = async (
           { signal },
         );
 
-        return ixa.from(stream);
-      }),
-      ixao.filter((chunk) => chunk.type === 'response.output_text.delta'),
-      ixao.map((chunk) => chunk.delta),
-      jsonParse(),
-      ixao.filter((item) => {
-        return item.stack.length === 2 && item.stack[1].key === 'translations';
+        return ixa.from(stream).pipe(
+          ixao.filter((chunk) => chunk.type === 'response.output_text.delta'),
+          ixao.map((chunk) => chunk.delta),
+          jsonParse(),
+          ixao.filter((item) => {
+            return (
+              item.stack.length === 2 && item.stack[1].key === 'translations'
+            );
+          }),
+        );
       }),
       ixao.flatMap((item) => {
         const res = zTranslation.safeParse(item.value);
@@ -220,11 +232,11 @@ export const translateText = async (
     );
 
     for await (const item of ixao.wrapWithAbort(translationsIterable, signal)) {
-      console.log(item);
+      console.log('Item', item);
       translations.add(item);
     }
 
-    console.log(translations.value.sentences);
+    console.log('Final result', translations.value.sentences);
   } catch (error) {
     if (error instanceof APIUserAbortError) {
       return;
