@@ -40,7 +40,7 @@ jobs:
         run: pnpm build
         env:
           BASE_URL: /book-translator/
-          VITE_BASE_URL: /book-translator/
+          VITE_BASE_URL: /book-translator
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
