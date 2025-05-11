@@ -1,4 +1,4 @@
-import { Component, createSignal } from 'solid-js';
+import { Component, createEffect } from 'solid-js';
 import { openaiClient } from './data/openaiClient';
 import { translationsStore } from './data/translationsStore';
 import ApiKeyForm from './components/ApiKeyForm';
@@ -8,54 +8,82 @@ import { textTranslationService } from './data/textTranslationService';
 import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './utils/ThemeContext';
 import { demoMode } from './data/demoMode';
+import { Route, Router, useNavigate } from '@solidjs/router';
 
-const BookTranslator: Component = () => {
-  const data = translationsStore.state;
-  const [abortController, setAbortController] =
-    createSignal<AbortController | null>(null);
+const Home: Component = () => {
+  const navigate = useNavigate();
 
-  const handleTranslate = (text: string, targetLanguage: string) => {
-    const controller = new AbortController();
-    setAbortController((prev) => {
-      if (prev && !prev.signal.aborted) {
-        prev.abort();
-      }
-      return controller;
-    });
+  if (!textTranslationService.ready()) {
+    navigate('/api-key', { replace: true });
+  } else if (translationsStore.state.sentences.length > 0) {
+    navigate('/translation-results', { replace: true });
+  } else {
+    navigate('/new-text', { replace: true });
+  }
 
-    return textTranslationService.translateText(
-      text,
-      targetLanguage,
-      controller.signal,
-    );
-  };
+  return null;
+};
+
+const PageApiKey: Component = () => {
+  const navigate = useNavigate();
+
+  return (
+    <ApiKeyForm
+      onSetApiKey={(apiKey) => openaiClient.setApiKey(apiKey)}
+      onChooseDemoMode={() => {
+        demoMode.setIsDemo(true);
+        navigate('/');
+      }}
+    />
+  );
+};
+
+const PageTranslationResults: Component = () => {
+  const navigate = useNavigate();
+
+  createEffect(() => {
+    if (translationsStore.state.sentences.length === 0) {
+      navigate('/', { replace: true });
+    }
+  });
 
   const handleNewText = () => {
-    if (abortController()) {
-      abortController()?.abort();
-      setAbortController(null);
-    }
-
+    textTranslationService.abort();
     translationsStore.clear();
+    navigate('/new-text');
   };
 
   return (
-    <>
-      {!openaiClient.client() && !demoMode.isDemo() ? (
-        <ApiKeyForm
-          onSetApiKey={(apiKey) => openaiClient.setApiKey(apiKey)}
-          onChooseDemoMode={() => demoMode.setIsDemo(true)}
-        />
-      ) : data.sentences.length > 0 ? (
-        <TranslationResults
-          results={data.sentences}
-          loading={data.loading}
-          onNewText={handleNewText}
-        />
-      ) : (
-        <BookTextForm loading={data.loading} onTranslate={handleTranslate} />
-      )}
-    </>
+    <TranslationResults
+      results={translationsStore.state.sentences}
+      loading={translationsStore.state.loading}
+      onNewText={handleNewText}
+    />
+  );
+};
+
+const PageNewText: Component = () => {
+  const navigate = useNavigate();
+
+  createEffect(() => {
+    if (!textTranslationService.ready()) {
+      navigate('/', { replace: true });
+    }
+  });
+
+  createEffect(() => {
+    if (translationsStore.state.sentences.length > 0) {
+      navigate('/translation-results');
+    }
+  });
+
+  return (
+    <BookTextForm
+      loading={translationsStore.state.loading}
+      onTranslate={(text, targetLanguage) =>
+        textTranslationService.translateText(text, targetLanguage)
+      }
+    />
   );
 };
 
@@ -63,7 +91,12 @@ const App: Component = () => {
   return (
     <ThemeProvider>
       <ThemeToggle />
-      <BookTranslator />
+      <Router>
+        <Route path="/" component={Home} />
+        <Route path="/new-text" component={PageNewText} />
+        <Route path="/api-key" component={PageApiKey} />
+        <Route path="/translation-results" component={PageTranslationResults} />
+      </Router>
     </ThemeProvider>
   );
 };

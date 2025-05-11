@@ -9,6 +9,8 @@ import { textTranslationLlmOpenai } from './textTranslationLlmOpenai';
 import { textTranslationLlmDemo } from './textTranslationLlmDemo';
 import { demoMode } from './demoMode';
 import { TextTranslationLlm } from './textTranslationLlm';
+import { createSignal } from 'solid-js';
+import { openaiClient } from './openaiClient';
 
 const translateTextLlm = (): TextTranslationLlm =>
   demoMode.isDemo() ? textTranslationLlmDemo : textTranslationLlmOpenai;
@@ -16,11 +18,19 @@ const translateTextLlm = (): TextTranslationLlm =>
 const translateText = async (
   text: string,
   targetLanguage: string,
-  signal?: AbortSignal,
 ): Promise<void> => {
   const llm = translateTextLlm();
 
   translationsStore.setLoading(true);
+
+  const controller = new AbortController();
+  setAbortController((prev) => {
+    if (prev && !prev.signal.aborted) {
+      prev.abort();
+    }
+    return controller;
+  });
+
   try {
     const batches = splitTextIntoBatches(text, 1000);
     console.log('Batches', batches);
@@ -50,7 +60,10 @@ const translateText = async (
       }),
     );
 
-    for await (const item of ixao.wrapWithAbort(translationsIterable, signal)) {
+    for await (const item of ixao.wrapWithAbort(
+      translationsIterable,
+      controller.signal,
+    )) {
       console.log('Item', item);
       translationsStore.add(item);
     }
@@ -70,6 +83,18 @@ const translateText = async (
   }
 };
 
+const abort = () => {
+  if (abortController()) {
+    abortController()?.abort();
+    setAbortController(null);
+  }
+};
+
+const [abortController, setAbortController] =
+  createSignal<AbortController | null>(null);
+
 export const textTranslationService = {
+  ready: () => openaiClient.client() || demoMode.isDemo(),
   translateText,
+  abort,
 };
