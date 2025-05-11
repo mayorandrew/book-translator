@@ -29,7 +29,10 @@ const PageApiKey: Component = () => {
 
   return (
     <ApiKeyForm
-      onSetApiKey={(apiKey) => openaiClient.setApiKey(apiKey)}
+      onSetApiKey={(apiKey) => {
+        openaiClient.setApiKey(apiKey);
+        navigate('/');
+      }}
       onChooseDemoMode={() => {
         demoMode.setIsDemo(true);
         navigate('/');
@@ -93,8 +96,8 @@ const App: Component = () => {
       <ThemeToggle />
       <Router base={import.meta.env.VITE_BASE_URL || '/'}>
         <Route path="/" component={Home} />
-        <Route path="/new-text" component={PageNewText} />
         <Route path="/api-key" component={PageApiKey} />
+        <Route path="/new-text" component={PageNewText} />
         <Route path="/translation-results" component={PageTranslationResults} />
       </Router>
     </ThemeProvider>
