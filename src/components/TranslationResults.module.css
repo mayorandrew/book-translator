@@ -8,9 +8,19 @@
   max-width: 1024px;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color var(--transition-time), color var(--transition-time);
+  background-color: var(--surface-background);
+  color: var(--text-on-background);
+  transition: background-color var(--transition-time-default), color var(--transition-time-default);
+
+  --surface-header: #f5f5f5;
+  --surface-row-hover: #f9f9f9;
+  --border-table: #cccccc;
+
+  [data-theme='dark'] & {
+    --surface-header: #1e1e1e;
+    --surface-row-hover: #2c2c2c;
+    --border-table: #444444;
+  }
 }
 
 .tableContainer {
@@ -26,43 +36,29 @@
 .headerCell {
   padding: 12px;
   text-align: left;
-  background-color: var(--header-background);
+  background-color: var(--surface-header);
   font-weight: 600;
-  border-bottom: 2px solid var(--border-color);
-  transition: background-color var(--transition-time), border-color var(--transition-time);
+  border-bottom: 2px solid var(--border-table);
+  transition: background-color var(--transition-time-default), border-color var(--transition-time-default);
 }
 
 .cell {
   padding: 12px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-table);
   vertical-align: top;
   word-wrap: break-word;
-  transition: border-color var(--transition-time);
+  transition: border-color var(--transition-time-default);
 }
 
 .row:hover {
-  background-color: var(--hover-color);
-  transition: background-color var(--transition-time);
+  background-color: var(--surface-row-hover);
+  transition: background-color var(--transition-time-default);
 }
 
 .buttonContainer {
   display: flex;
   justify-content: flex-start;
   margin-top: 20px;
-}
-
-.buttonContainer button {
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.buttonContainer button:hover {
-  opacity: 0.9;
 }
 
 @media (max-width: 768px) {

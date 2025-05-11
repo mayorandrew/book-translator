@@ -1,9 +1,17 @@
+import { Button as KButton } from '@kobalte/core/button';
 import { Component, JSX } from 'solid-js';
 import clsx from 'clsx';
 import s from './Button.module.css';
 
+export const ButtonVariant = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+};
+
+export type ButtonVariant = (typeof ButtonVariant)[keyof typeof ButtonVariant];
+
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary';
+  variant?: ButtonVariant;
   type?: 'button' | 'submit' | 'reset';
   onClick?: JSX.EventHandlerUnion<HTMLButtonElement, MouseEvent>;
   children: JSX.Element;
@@ -11,24 +19,25 @@ export interface ButtonProps {
   class?: string;
   title?: string;
   ariaLabel?: string;
+  loading?: boolean;
+  loadingChildren?: JSX.Element;
 }
 
-const Button: Component<ButtonProps> = (props) => {
+export const Button: Component<ButtonProps> = (props) => {
   return (
-    <button
-      type={props.type || 'button'}
-      class={clsx(s.button, props.class, {
-        [s.primary]: !props.variant || props.variant === 'primary',
-        [s.secondary]: props.variant === 'secondary',
+    <KButton
+      class={clsx(s.Button, props.class, {
+        [s._primary]: !props.variant || props.variant === ButtonVariant.Primary,
+        [s._secondary]: props.variant === ButtonVariant.Secondary,
       })}
+      type={props.type || 'button'}
       disabled={props.disabled}
       title={props.title}
       aria-label={props.ariaLabel}
       onClick={props.onClick}
+      data-loading={!!props.loading}
     >
-      {props.children}
-    </button>
+      {props.loading ? props.loadingChildren ?? 'Loading...' : props.children}
+    </KButton>
   );
 };
-
-export default Button;

@@ -7,24 +7,19 @@
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color var(--transition-time), color var(--transition-time);
+  background-color: var(--surface-background);
+  color: var(--text-on-background);
+  transition: background-color var(--transition-time-default), color var(--transition-time-default);
 }
 
 .textarea {
   flex: 1;
   width: 100%;
-  padding: 20px;
-  font-size: 16px;
+  /*padding: 20px;*/
+  font-size: 1rem;
   line-height: 1.5;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
   resize: none;
   margin-bottom: 20px;
-  background-color: var(--input-background);
-  color: var(--text-color);
-  transition: background-color var(--transition-time), color var(--transition-time), border-color var(--transition-time);
 }
 
 .formControls {
@@ -42,36 +37,20 @@
 
 .languageSelector label {
   font-size: 0.9rem;
-  color: var(--text-color);
-  transition: color var(--transition-time);
+  color: var(--text-on-background);
+  transition: color var(--transition-time-default);
 }
 
 .languageSelector select {
   padding: 6px 12px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-main);
   border-radius: 4px;
-  background-color: var(--input-background);
-  color: var(--text-color);
+  background-color: var(--surface-main);
+  color: var(--text-on-main);
   font-size: 0.9rem;
-  transition: background-color var(--transition-time), color var(--transition-time), border-color var(--transition-time);
+  transition: background-color var(--transition-time-default), color var(--transition-time-default), border-color var(--transition-time-default);
 }
 
 .translateButton {
   min-width: 120px;
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.translateButton:hover {
-  opacity: 0.9;
-}
-
-.translateButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }

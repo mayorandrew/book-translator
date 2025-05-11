@@ -1,0 +1,14 @@
+.Textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-main);
+  background-color: var(--surface-main);
+  color: var(--text-on-main);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+}

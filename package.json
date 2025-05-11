@@ -18,7 +18,9 @@
     "vite-plugin-solid": "^2.11.6"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.9",
     "@solid-primitives/storage": "^4.3.2",
+    "@solidjs/router": "^0.15.3",
     "@streamparser/json": "^0.0.22",
     "@streamparser/json-whatwg": "^0.0.22",
     "clsx": "^2.1.1",

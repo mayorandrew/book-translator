@@ -1,6 +1,7 @@
 import { Component } from 'solid-js';
+import { Button } from './ui/Button';
+import { Input } from './ui/Input';
 import s from './ApiKeyForm.module.css';
-import Button from './ui/Button';
 
 export interface ApiKeyFormProps {
   onSetApiKey: (apiKey: string) => void;
@@ -24,13 +25,13 @@ const ApiKeyForm: Component<ApiKeyFormProps> = (props) => {
         <form onSubmit={handleSubmit} class={s.form}>
           <div class={s.inputGroup}>
             <label for="apiKey">OpenAI API Key</label>
-            <input
+            <Input
               type="password"
               id="apiKey"
               name="apiKey"
               required
               placeholder="sk-..."
-              class={s.input}
+              fullWidth
             />
           </div>
           <div class={s.buttons}>

@@ -1,8 +1,9 @@
 import { Component, createSignal } from 'solid-js';
 import ISO6391 from 'iso-639-1';
 import s from './BookTextForm.module.css';
-import Button from './ui/Button';
+import { Button } from './ui/Button';
 import { makePersisted } from '@solid-primitives/storage';
+import { Textarea } from './ui/Textarea';
 
 export interface BookTextFormProps {
   onTranslate: (text: string, language: string) => void;
@@ -39,7 +40,7 @@ const BookTextForm: Component<BookTextFormProps> = (props) => {
 
   return (
     <form class={s.form} onSubmit={handleSubmit}>
-      <textarea
+      <Textarea
         name="text"
         class={s.textarea}
         placeholder="Paste your book text here..."
@@ -70,8 +71,10 @@ const BookTextForm: Component<BookTextFormProps> = (props) => {
           type="submit"
           class={s.translateButton}
           disabled={props.loading}
+          loading={props.loading}
+          loadingChildren="Translating..."
         >
-          {props.loading ? 'Translating...' : 'Translate'}
+          Translate
         </Button>
       </div>
     </form>

@@ -1,7 +1,7 @@
 import { Component } from 'solid-js';
 import { useTheme } from '../utils/ThemeContext';
 import styles from './ThemeToggle.module.css';
-import Button from './ui/Button';
+import { Button } from './ui/Button';
 
 const ThemeToggle: Component = () => {
   const { theme, setTheme } = useTheme()!;
