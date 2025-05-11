@@ -6,6 +6,8 @@ import TranslatedSentence from './TranslatedSentence';
 import s from './TranslationResults.module.css';
 
 interface TranslationResultsProps {
+  originalLanguage: string;
+  targetLanguage: string;
   results: Sentence[];
   loading?: boolean;
   onNewText?: () => void;
@@ -27,7 +29,13 @@ const TranslationResults: Component<TranslationResultsProps> = (props) => {
             <For each={props.results}>
               {(result: Sentence) => (
                 <tr class={s.row}>
-                  <td class={s.cell}><TranslatedSentence sentence={result} /></td>
+                  <td class={s.cell}>
+                    <TranslatedSentence
+                      sentence={result}
+                      originalLanguage={props.originalLanguage}
+                      targetLanguage={props.targetLanguage}
+                    />
+                  </td>
                   <td class={s.cell}>{result.translated}</td>
                 </tr>
               )}

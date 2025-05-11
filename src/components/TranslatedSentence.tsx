@@ -7,6 +7,8 @@ import { wordsList } from '../data/wordsList';
 import { isDeepEqual } from 'remeda';
 
 interface WordProps {
+  originalLanguage: string;
+  targetLanguage: string;
   word: Word;
   sentence: Sentence;
   index: number;
@@ -24,7 +26,7 @@ const Word: Component<WordProps> = (props) => {
 
   const hasExample = () => {
     const newExample = example();
-    return hasWord()?.examples.some((e) => isDeepEqual(newExample, e));
+    return hasWord()?.examples.some((e) => isDeepEqual(newExample, e)) || false;
   };
 
   return (
@@ -33,25 +35,21 @@ const Word: Component<WordProps> = (props) => {
       <Popover.Portal>
         <Popover.Content class={s.__tooltipContent}>
           <Popover.Arrow />
-          <div>{`${props.word.parts.join('…')} (${props.word.normalized}) — ${props.word.translated}`}</div>
-          {hasWord() ? (
+          <div>
+            {props.word.parts.join('…')} — {props.word.translated}
+            <br />
+            {props.word.normalized} —{' '}
+            {props.word.normalizedTranslations.join(', ')}
+          </div>
+          {hasExample() ? (
             <>
-              {!hasExample() && (
-                <Button
-                  class={s.__tooltipButton}
-                  title="Add example"
-                  onClick={() =>
-                    wordsList.addExample(props.word.normalized, example())
-                  }
-                >
-                  +
-                </Button>
-              )}
               <Button
                 variant={ButtonVariant.Secondary}
                 class={s.__tooltipButton}
-                title="Remove from vocabulary"
-                onClick={() => wordsList.removeWord(props.word.normalized)}
+                title="Remove example from vocabulary"
+                onClick={() =>
+                  wordsList.removeExample(props.word.normalized, example())
+                }
               >
                 -
               </Button>
@@ -62,8 +60,10 @@ const Word: Component<WordProps> = (props) => {
               title="Add to vocabulary"
               onClick={() =>
                 wordsList.add({
+                  originalLanguage: props.originalLanguage,
+                  targetLanguage: props.targetLanguage,
                   normalized: props.word.normalized,
-                  translated: props.word.translated,
+                  translations: props.word.normalizedTranslations,
                   examples: [example()],
                 })
               }
@@ -79,6 +79,8 @@ const Word: Component<WordProps> = (props) => {
 
 interface TranslatedSentenceProps {
   sentence: Sentence;
+  originalLanguage: string;
+  targetLanguage: string;
 }
 
 const TranslatedSentence: Component<TranslatedSentenceProps> = (props) => {
@@ -116,7 +118,13 @@ const TranslatedSentence: Component<TranslatedSentenceProps> = (props) => {
       }
 
       result.push(
-        <Word word={nextWord} sentence={props.sentence} index={iWord} />,
+        <Word
+          word={nextWord}
+          sentence={props.sentence}
+          index={iWord}
+          originalLanguage={props.originalLanguage}
+          targetLanguage={props.targetLanguage}
+        />,
       );
 
       index = wordStart + nextWord.word.length;

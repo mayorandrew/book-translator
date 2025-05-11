@@ -3,7 +3,7 @@ import * as ixao from 'ix/asynciterable/operators';
 import { APIUserAbortError } from 'openai';
 import { splitTextIntoBatches } from '../utils/splitTextIntoBatches';
 import { jsonParse } from '../utils/jsonParse';
-import { translationsStore } from './translationsStore';
+import { translationsStore, Word } from './translationsStore';
 import { zSentence } from './textTranslationResponse';
 import { textTranslationLlmOpenai } from './textTranslationLlmOpenai';
 import { textTranslationLlmDemo } from './textTranslationLlmDemo';
@@ -35,20 +35,21 @@ const translateText = async (
     const batches = splitTextIntoBatches(text, 1000);
     console.log('Batches', batches);
 
-    const translationsIterable = ixa.from(batches).pipe(
+    const jsonIterable = ixa.from(batches).pipe(
       ixao.concatMap((batch, iBatch, signal) => {
         console.log('Requesting batch', batch);
 
         const stream = llm.streamTranslations(batch, targetLanguage, signal);
 
-        return ixa.from(stream).pipe(
-          jsonParse(),
-          ixao.filter(
-            (item) =>
-              item.stack.length === 2 && item.stack[1].key === 'sentences',
-          ),
-        );
+        return ixa.from(stream).pipe(jsonParse());
       }),
+      ixao.memoize(),
+    );
+
+    const translationsIterable = jsonIterable.pipe(
+      ixao.filter(
+        (item) => item.stack.length === 2 && item.stack[1].key === 'sentences',
+      ),
       ixao.flatMap((item) => {
         const res = zSentence.safeParse(item.value);
         if (res.success) {
@@ -60,14 +61,56 @@ const translateText = async (
       }),
     );
 
-    for await (const item of ixao.wrapWithAbort(
-      translationsIterable,
-      controller.signal,
-    )) {
-      console.log('Item', item);
-      translationsStore.add(item);
-    }
+    await Promise.all([
+      (async () => {
+        const iterable = jsonIterable.pipe(
+          ixao.filter(
+            (item) =>
+              item.stack.length === 1 && item.key === 'originalLanguage',
+          ),
+          ixao.map((item) => {
+            if (typeof item.value === 'string') {
+              return item.value;
+            }
 
+            console.log('Invalid originalLanguage', item);
+            return undefined;
+          }),
+        );
+
+        const originalLanguage = await ixa.first(iterable);
+        translationsStore.setOriginalLanguage(originalLanguage || 'xx');
+        translationsStore.setTargetLanguage(targetLanguage);
+
+        await ixa.last(iterable);
+      })(),
+      (async () => {
+        for await (const item of ixao.wrapWithAbort(
+          translationsIterable,
+          controller.signal,
+        )) {
+          console.log('Item', item);
+          translationsStore.add({
+            translated: item.translated,
+            original: item.original,
+            words: item.words.map(
+              (w): Word => ({
+                word: w.w,
+                translated: w.t,
+                normalized: w.n,
+                parts: w.p,
+                normalizedTranslations: w.tn,
+              }),
+            ),
+          });
+        }
+      })(),
+    ]);
+
+    console.log(
+      'Original language',
+      JSON.stringify(translationsStore.state.originalLanguage),
+    );
     console.log(
       'Final result',
       JSON.stringify(translationsStore.state.sentences),

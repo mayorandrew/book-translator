@@ -1,566 +1,651 @@
 {
+  "originalLanguage": "de",
   "sentences": [
     {
+      "translated": "«Её зовут Штернхен», — сообщила Жасмин своей лучшей подруге Ларе по дороге домой из школы.",
       "original": "„Sie heißt Sternchen\", teilte Jasmin ihrer besten Freundin Lara auf dem Nachhauseweg von der Schule mit.",
-      "translated": "«Её зовут Штернхен», - сообщила Жасмин своей лучшей подруге Ларе по дороге домой из школы.",
       "words": [
         {
-          "word": "Sie",
-          "parts": ["Sie"],
-          "normalized": "sie",
-          "translated": "её"
+          "w": "Sie",
+          "t": "она",
+          "n": "sie",
+          "p": ["Sie"],
+          "tn": ["она", "вы", "они"]
         },
         {
-          "word": "heißt",
-          "parts": ["heißt"],
-          "normalized": "heißen",
-          "translated": "зовут"
+          "w": "heißt",
+          "t": "зовут",
+          "n": "heißen",
+          "p": ["heißt"],
+          "tn": ["звать", "называться"]
         },
         {
-          "word": "Sternchen",
-          "parts": ["Sternchen"],
-          "normalized": "Sternchen",
-          "translated": "Штернхен"
+          "w": "Sternchen",
+          "t": "Штернхен",
+          "n": "Sternchen",
+          "p": ["Sternchen"],
+          "tn": ["Sternchen"]
         },
         {
-          "word": "teilte",
-          "parts": ["teilte", "mit"],
-          "normalized": "mitteilen",
-          "translated": "сообщила"
+          "w": "teilte",
+          "t": "сообщила",
+          "n": "mitteilen",
+          "p": ["teilte", "mit"],
+          "tn": ["сообщать", "передавать", "уведомлять"]
         },
         {
-          "word": "Jasmin",
-          "parts": ["Jasmin"],
-          "normalized": "Jasmin",
-          "translated": "Жасмин"
+          "w": "Jasmin",
+          "t": "Жасмин",
+          "n": "Jasmin",
+          "p": ["Jasmin"],
+          "tn": ["Jasmin"]
         },
         {
-          "word": "ihrer",
-          "parts": ["ihrer"],
-          "normalized": "ihr",
-          "translated": "своей"
+          "w": "ihrer",
+          "t": "своей",
+          "n": "ihr",
+          "p": ["ihrer"],
+          "tn": ["ее", "свой"]
         },
         {
-          "word": "besten",
-          "parts": ["besten"],
-          "normalized": "beste",
-          "translated": "лучшей"
+          "w": "besten",
+          "t": "лучшей",
+          "n": "gut",
+          "p": ["besten"],
+          "tn": ["хороший", "лучший"]
         },
         {
-          "word": "Freundin",
-          "parts": ["Freundin"],
-          "normalized": "Freundin",
-          "translated": "подруге"
+          "w": "Freundin",
+          "t": "подруге",
+          "n": "Freundin",
+          "p": ["Freundin"],
+          "tn": ["подруга", "приятельница"]
         },
         {
-          "word": "Lara",
-          "parts": ["Lara"],
-          "normalized": "Lara",
-          "translated": "Ларе"
+          "w": "Lara",
+          "t": "Ларе",
+          "n": "Lara",
+          "p": ["Lara"],
+          "tn": ["Lara"]
         },
         {
-          "word": "auf",
-          "parts": ["auf"],
-          "normalized": "auf",
-          "translated": "по"
+          "w": "auf",
+          "t": "по",
+          "n": "auf",
+          "p": ["auf"],
+          "tn": ["на", "в", "по"]
         },
         {
-          "word": "dem",
-          "parts": ["dem"],
-          "normalized": "der",
-          "translated": "дороге"
+          "w": "dem",
+          "t": "(артикль дательного падежа)",
+          "n": "der",
+          "p": ["dem"],
+          "tn": ["тот", "этот"]
         },
         {
-          "word": "Nachhauseweg",
-          "parts": ["Nachhauseweg"],
-          "normalized": "Nachhauseweg",
-          "translated": "домой"
+          "w": "Nachhauseweg",
+          "t": "дороге домой",
+          "n": "Nachhauseweg",
+          "p": ["Nachhauseweg"],
+          "tn": ["путь домой", "дорога домой"]
         },
         {
-          "word": "von",
-          "parts": ["von"],
-          "normalized": "von",
-          "translated": "из"
+          "w": "von",
+          "t": "из",
+          "n": "von",
+          "p": ["von"],
+          "tn": ["от", "со", "из"]
         },
         {
-          "word": "der",
-          "parts": ["der"],
-          "normalized": "die",
-          "translated": "из"
+          "w": "der",
+          "t": "(артикль рода женского)",
+          "n": "der",
+          "p": ["der"],
+          "tn": ["тот", "этот"]
         },
         {
-          "word": "Schule",
-          "parts": ["Schule"],
-          "normalized": "Schule",
-          "translated": "школы"
+          "w": "Schule",
+          "t": "школы",
+          "n": "Schule",
+          "p": ["Schule"],
+          "tn": ["школа", "учреждение"]
         },
         {
-          "word": "mit",
-          "parts": ["teilte", "mit"],
-          "normalized": "mitteilen",
-          "translated": "сообщила"
+          "w": "mit",
+          "t": "сообщила",
+          "n": "mitteilen",
+          "p": ["teilte", "mit"],
+          "tn": ["сообщать", "передавать", "уведомлять"]
         }
       ]
     },
     {
+      "translated": "«У неё такие милые полоски, как у тигра», — восхищалась Жасмин.",
       "original": "„Sie hat sooo süße Tigerstreifen\", schwärmte Jasmin.",
-      "translated": "«У неё такие милые тигриные полоски», - восхищалась Жасмин.",
       "words": [
         {
-          "word": "Sie",
-          "parts": ["Sie"],
-          "normalized": "sie",
-          "translated": "у неё"
+          "w": "Sie",
+          "t": "у неё",
+          "n": "sie",
+          "p": ["Sie"],
+          "tn": ["она", "вы", "они"]
         },
         {
-          "word": "hat",
-          "parts": ["hat"],
-          "normalized": "haben",
-          "translated": "есть"
+          "w": "hat",
+          "t": "имеет",
+          "n": "haben",
+          "p": ["hat"],
+          "tn": ["иметь", "обладать"]
         },
         {
-          "word": "sooo",
-          "parts": ["sooo"],
-          "normalized": "so",
-          "translated": "такие"
+          "w": "sooo",
+          "t": "такие, очень",
+          "n": "so",
+          "p": ["sooo"],
+          "tn": ["так", "настолько", "таким образом"]
         },
         {
-          "word": "süße",
-          "parts": ["süße"],
-          "normalized": "süß",
-          "translated": "милые"
+          "w": "süße",
+          "t": "милые",
+          "n": "süß",
+          "p": ["süße"],
+          "tn": ["сладкий", "милый", "прелестный"]
         },
         {
-          "word": "Tigerstreifen",
-          "parts": ["Tigerstreifen"],
-          "normalized": "Tigerstreifen",
-          "translated": "тигриные полоски"
+          "w": "Tigerstreifen",
+          "t": "полоски тигра",
+          "n": "Tigerstreifen",
+          "p": ["Tigerstreifen"],
+          "tn": ["полосы тигра"]
         },
         {
-          "word": "schwärmte",
-          "parts": ["schwärmte"],
-          "normalized": "schwärmen",
-          "translated": "восхищалась"
+          "w": "schwärmte",
+          "t": "восхищалась",
+          "n": "schwärmen",
+          "p": ["schwärmte"],
+          "tn": ["восхищаться", "фантазировать"]
         },
         {
-          "word": "Jasmin",
-          "parts": ["Jasmin"],
-          "normalized": "Jasmin",
-          "translated": "Жасмин"
+          "w": "Jasmin",
+          "t": "Жасмин",
+          "n": "Jasmin",
+          "p": ["Jasmin"],
+          "tn": ["Jasmin"]
         }
       ]
     },
     {
+      "translated": "«Так я представляю себе свою кошку мечты.",
       "original": "„So stelle ich mir meine Traumkatze vor.",
-      "translated": "Так я себе представляю мою кошку мечты.",
       "words": [
         {
-          "word": "So",
-          "parts": ["So"],
-          "normalized": "so",
-          "translated": "так"
+          "w": "So",
+          "t": "так",
+          "n": "so",
+          "p": ["So"],
+          "tn": ["так", "таким образом", "столько"]
         },
         {
-          "word": "stelle",
-          "parts": ["stelle", "vor"],
-          "normalized": "vorstellen",
-          "translated": "представляю"
+          "w": "stelle",
+          "t": "представляю",
+          "n": "vorstellen",
+          "p": ["stelle", "vor"],
+          "tn": ["представлять", "воображать"]
         },
         {
-          "word": "ich",
-          "parts": ["ich"],
-          "normalized": "ich",
-          "translated": "я"
+          "w": "ich",
+          "t": "я",
+          "n": "ich",
+          "p": ["ich"],
+          "tn": ["я"]
         },
         {
-          "word": "mir",
-          "parts": ["mir"],
-          "normalized": "ich",
-          "translated": "себе"
+          "w": "mir",
+          "t": "себе",
+          "n": "ich",
+          "p": ["mir"],
+          "tn": ["мне", "себе"]
         },
         {
-          "word": "meine",
-          "parts": ["meine"],
-          "normalized": "mein",
-          "translated": "мою"
+          "w": "meine",
+          "t": "свою",
+          "n": "mein",
+          "p": ["meine"],
+          "tn": ["мой", "моя", "мое", "мои"]
         },
         {
-          "word": "Traumkatze",
-          "parts": ["Traumkatze"],
-          "normalized": "Traumkatze",
-          "translated": "кошку мечты"
+          "w": "Traumkatze",
+          "t": "кошку мечты",
+          "n": "Traumkatze",
+          "p": ["Traumkatze"],
+          "tn": ["кошка мечты", "идеальная кошка"]
         },
         {
-          "word": "vor",
-          "parts": ["stelle", "vor"],
-          "normalized": "vorstellen",
-          "translated": "представляю"
+          "w": "vor",
+          "t": "представляю",
+          "n": "vorstellen",
+          "p": ["stelle", "vor"],
+          "tn": ["представлять", "воображать"]
         }
       ]
     },
     {
-      "original": "So eine wunderschöne Katze möchte ich irgendwann mal haben, weißt du?\"",
-      "translated": "Такую прекрасную кошку я когда-нибудь хочу иметь, понимаешь?",
+      "translated": "Такую прекрасную кошку я бы когда-нибудь хотел завести, понимаешь?",
+      "original": "So eine wunderschöne Katze möchte ich irgendwann mal haben, weißt du?",
       "words": [
         {
-          "word": "So",
-          "parts": ["So"],
-          "normalized": "so",
-          "translated": "такую"
+          "w": "So",
+          "t": "так",
+          "n": "so",
+          "p": ["So"],
+          "tn": ["так", "таким образом", "столько"]
         },
         {
-          "word": "eine",
-          "parts": ["eine"],
-          "normalized": "ein",
-          "translated": "одну"
+          "w": "eine",
+          "t": "одна",
+          "n": "ein",
+          "p": ["eine"],
+          "tn": ["один", "одна", "одно"]
         },
         {
-          "word": "wunderschöne",
-          "parts": ["wunderschöne"],
-          "normalized": "wunderschön",
-          "translated": "прекрасную"
+          "w": "wunderschöne",
+          "t": "прекрасную",
+          "n": "wunderschön",
+          "p": ["wunderschöne"],
+          "tn": ["прекрасный", "очаровательный"]
         },
         {
-          "word": "Katze",
-          "parts": ["Katze"],
-          "normalized": "Katze",
-          "translated": "кошку"
+          "w": "Katze",
+          "t": "кошку",
+          "n": "Katze",
+          "p": ["Katze"],
+          "tn": ["кошка", "кот"]
         },
         {
-          "word": "möchte",
-          "parts": ["möchte"],
-          "normalized": "mögen",
-          "translated": "хочу"
+          "w": "möchte",
+          "t": "хотел(а) бы",
+          "n": "mögen",
+          "p": ["möchte"],
+          "tn": ["хотеть", "желать"]
         },
         {
-          "word": "ich",
-          "parts": ["ich"],
-          "normalized": "ich",
-          "translated": "я"
+          "w": "ich",
+          "t": "я",
+          "n": "ich",
+          "p": ["ich"],
+          "tn": ["я"]
         },
         {
-          "word": "irgendwann",
-          "parts": ["irgendwann"],
-          "normalized": "irgendwann",
-          "translated": "когда-нибудь"
+          "w": "irgendwann",
+          "t": "когда-нибудь",
+          "n": "irgendwann",
+          "p": ["irgendwann"],
+          "tn": ["когда-нибудь", "в будущем"]
         },
         {
-          "word": "mal",
-          "parts": ["mal"],
-          "normalized": "mal",
-          "translated": "раз"
+          "w": "mal",
+          "t": "раз",
+          "n": "mal",
+          "p": ["mal"],
+          "tn": ["раз", "однажды"]
         },
         {
-          "word": "haben",
-          "parts": ["haben"],
-          "normalized": "haben",
-          "translated": "иметь"
+          "w": "haben",
+          "t": "иметь",
+          "n": "haben",
+          "p": ["haben"],
+          "tn": ["иметь", "обладать"]
         },
         {
-          "word": "weißt",
-          "parts": ["weißt", "du"],
-          "normalized": "wissen",
-          "translated": "понимаешь"
+          "w": "weißt",
+          "t": "знаешь",
+          "n": "wissen",
+          "p": ["weißt"],
+          "tn": ["знать", "понимать"]
         },
         {
-          "word": "du",
-          "parts": ["weißt", "du"],
-          "normalized": "du",
-          "translated": "ты"
+          "w": "du",
+          "t": "ты",
+          "n": "du",
+          "p": ["du"],
+          "tn": ["ты"]
         }
       ]
     },
     {
+      "translated": "«Ну, тебе повезло, что она живёт прямо по соседству.",
       "original": "„Na, da hast du ja Glück, dass sie gleich nebenan wohnt.",
-      "translated": "Ну, тебе повезло, что она живёт прямо по соседству.",
       "words": [
         {
-          "word": "Na",
-          "parts": ["Na"],
-          "normalized": "na",
-          "translated": "ну"
+          "w": "Na",
+          "t": "ну",
+          "n": "na",
+          "p": ["Na"],
+          "tn": ["ну", "же"]
         },
         {
-          "word": "da",
-          "parts": ["da"],
-          "normalized": "da",
-          "translated": "там"
+          "w": "da",
+          "t": "там, тут",
+          "n": "da",
+          "p": ["da"],
+          "tn": ["там", "тут", "вот"]
         },
         {
-          "word": "hast",
-          "parts": ["hast"],
-          "normalized": "haben",
-          "translated": "имеешь"
+          "w": "hast",
+          "t": "у тебя есть",
+          "n": "haben",
+          "p": ["hast"],
+          "tn": ["иметь", "обладать"]
         },
         {
-          "word": "du",
-          "parts": ["du"],
-          "normalized": "du",
-          "translated": "ты"
+          "w": "du",
+          "t": "ты",
+          "n": "du",
+          "p": ["du"],
+          "tn": ["ты"]
         },
         {
-          "word": "ja",
-          "parts": ["ja"],
-          "normalized": "ja",
-          "translated": "же"
+          "w": "ja",
+          "t": "же",
+          "n": "ja",
+          "p": ["ja"],
+          "tn": ["да", "же"]
         },
         {
-          "word": "Glück",
-          "parts": ["Glück"],
-          "normalized": "Glück",
-          "translated": "везение"
+          "w": "Glück",
+          "t": "удачу",
+          "n": "Glück",
+          "p": ["Glück"],
+          "tn": ["счастье", "удача"]
         },
         {
-          "word": "dass",
-          "parts": ["dass"],
-          "normalized": "dass",
-          "translated": "что"
+          "w": "dass",
+          "t": "что",
+          "n": "dass",
+          "p": ["dass"],
+          "tn": ["что"]
         },
         {
-          "word": "sie",
-          "parts": ["sie"],
-          "normalized": "sie",
-          "translated": "она"
+          "w": "sie",
+          "t": "она",
+          "n": "sie",
+          "p": ["sie"],
+          "tn": ["она", "они"]
         },
         {
-          "word": "gleich",
-          "parts": ["gleich"],
-          "normalized": "gleich",
-          "translated": "прямо"
+          "w": "gleich",
+          "t": "прямо",
+          "n": "gleich",
+          "p": ["gleich"],
+          "tn": ["равный", "прямо", "одинаковый"]
         },
         {
-          "word": "nebenan",
-          "parts": ["nebenan"],
-          "normalized": "nebenan",
-          "translated": "по соседству"
+          "w": "nebenan",
+          "t": "по соседству",
+          "n": "nebenan",
+          "p": ["nebenan"],
+          "tn": ["рядом", "по соседству"]
         },
         {
-          "word": "wohnt",
-          "parts": ["wohnt"],
-          "normalized": "wohnen",
-          "translated": "живет"
+          "w": "wohnt",
+          "t": "живет",
+          "n": "wohnen",
+          "p": ["wohnt"],
+          "tn": ["жить", "проживать"]
         }
       ]
     },
     {
-      "original": "Vielleicht kommt sie ab und zu in euren Garten.\"",
       "translated": "Возможно, она время от времени приходит в ваш сад.",
+      "original": "Vielleicht kommt sie ab und zu in euren Garten.",
       "words": [
         {
-          "word": "Vielleicht",
-          "parts": ["Vielleicht"],
-          "normalized": "vielleicht",
-          "translated": "возможно"
+          "w": "Vielleicht",
+          "t": "возможно",
+          "n": "vielleicht",
+          "p": ["Vielleicht"],
+          "tn": ["возможно", "может быть"]
         },
         {
-          "word": "kommt",
-          "parts": ["kommt"],
-          "normalized": "kommen",
-          "translated": "приходит"
+          "w": "kommt",
+          "t": "приходит",
+          "n": "kommen",
+          "p": ["kommt"],
+          "tn": ["приходить", "приезжать"]
         },
         {
-          "word": "sie",
-          "parts": ["sie"],
-          "normalized": "sie",
-          "translated": "она"
+          "w": "sie",
+          "t": "она",
+          "n": "sie",
+          "p": ["sie"],
+          "tn": ["она", "они"]
         },
         {
-          "word": "ab",
-          "parts": ["ab", "zu"],
-          "normalized": "ab und zu",
-          "translated": "время от времени"
+          "w": "ab",
+          "t": "время от времени",
+          "n": "ab und zu",
+          "p": ["ab", "zu"],
+          "tn": ["иногда", "порой"]
         },
         {
-          "word": "und",
-          "parts": ["ab", "zu"],
-          "normalized": "ab und zu",
-          "translated": "и"
+          "w": "und",
+          "t": "и",
+          "n": "und",
+          "p": ["und"],
+          "tn": ["и"]
         },
         {
-          "word": "zu",
-          "parts": ["ab", "zu"],
-          "normalized": "ab und zu",
-          "translated": "время от времени"
+          "w": "zu",
+          "t": "время от времени",
+          "n": "ab und zu",
+          "p": ["ab", "zu"],
+          "tn": ["иногда", "порой"]
         },
         {
-          "word": "in",
-          "parts": ["in"],
-          "normalized": "in",
-          "translated": "в"
+          "w": "in",
+          "t": "в",
+          "n": "in",
+          "p": ["in"],
+          "tn": ["в", "на"]
         },
         {
-          "word": "euren",
-          "parts": ["euren"],
-          "normalized": "euer",
-          "translated": "ваш"
+          "w": "euren",
+          "t": "ваш",
+          "n": "euer",
+          "p": ["euren"],
+          "tn": ["ваш", "свой"]
         },
         {
-          "word": "Garten",
-          "parts": ["Garten"],
-          "normalized": "Garten",
-          "translated": "сад"
+          "w": "Garten",
+          "t": "сад",
+          "n": "Garten",
+          "p": ["Garten"],
+          "tn": ["сад", "огород"]
         }
       ]
     },
     {
+      "translated": "Лара была немного завистливой.",
       "original": "Lara war ein wenig neidisch.",
-      "translated": "Лара была немного завистлива.",
       "words": [
         {
-          "word": "Lara",
-          "parts": ["Lara"],
-          "normalized": "Lara",
-          "translated": "Лара"
+          "w": "Lara",
+          "t": "Лара",
+          "n": "Lara",
+          "p": ["Lara"],
+          "tn": ["Lara"]
         },
         {
-          "word": "war",
-          "parts": ["war"],
-          "normalized": "sein",
-          "translated": "была"
+          "w": "war",
+          "t": "была",
+          "n": "sein",
+          "p": ["war"],
+          "tn": ["быть", "являться"]
         },
         {
-          "word": "ein",
-          "parts": ["ein"],
-          "normalized": "ein",
-          "translated": "немного"
+          "w": "ein",
+          "t": "один",
+          "n": "ein",
+          "p": ["ein"],
+          "tn": ["один", "какой-то"]
         },
         {
-          "word": "wenig",
-          "parts": ["wenig"],
-          "normalized": "wenig",
-          "translated": "немного"
+          "w": "wenig",
+          "t": "немного",
+          "n": "wenig",
+          "p": ["wenig"],
+          "tn": ["мало", "немного", "несколько"]
         },
         {
-          "word": "neidisch",
-          "parts": ["neidisch"],
-          "normalized": "neidisch",
-          "translated": "завистлива"
+          "w": "neidisch",
+          "t": "завистливой",
+          "n": "neidisch",
+          "p": ["neidisch"],
+          "tn": ["завистливый", "ревнивый"]
         }
       ]
     },
     {
+      "translated": "«Знаешь ли ты, сколько ей лет?»",
       "original": "„Weißt du, wie alt sie ist?\"",
-      "translated": "Ты знаешь, сколько ей лет?",
       "words": [
         {
-          "word": "Weißt",
-          "parts": ["Weißt", "du"],
-          "normalized": "wissen",
-          "translated": "знаешь"
+          "w": "Weißt",
+          "t": "знаешь",
+          "n": "wissen",
+          "p": ["Weißt"],
+          "tn": ["знать", "понимать"]
         },
         {
-          "word": "du",
-          "parts": ["Weißt", "du"],
-          "normalized": "du",
-          "translated": "ты"
+          "w": "du",
+          "t": "ты",
+          "n": "du",
+          "p": ["du"],
+          "tn": ["ты"]
         },
         {
-          "word": "wie",
-          "parts": ["wie"],
-          "normalized": "wie",
-          "translated": "сколько"
+          "w": "wie",
+          "t": "как",
+          "n": "wie",
+          "p": ["wie"],
+          "tn": ["как", "насколько"]
         },
         {
-          "word": "alt",
-          "parts": ["alt"],
-          "normalized": "alt",
-          "translated": "старых"
+          "w": "alt",
+          "t": "старый",
+          "n": "alt",
+          "p": ["alt"],
+          "tn": ["старый", "возраст"]
         },
         {
-          "word": "sie",
-          "parts": ["sie"],
-          "normalized": "sie",
-          "translated": "ей"
+          "w": "sie",
+          "t": "она",
+          "n": "sie",
+          "p": ["sie"],
+          "tn": ["она", "они"]
         },
         {
-          "word": "ist",
-          "parts": ["ist"],
-          "normalized": "sein",
-          "translated": "есть"
+          "w": "ist",
+          "t": "является",
+          "n": "sein",
+          "p": ["ist"],
+          "tn": ["быть", "являться"]
         }
       ]
     },
     {
+      "translated": "«Почти три месяца.",
       "original": "„Fast drei Monate.",
-      "translated": "Почти три месяца.",
       "words": [
         {
-          "word": "Fast",
-          "parts": ["Fast"],
-          "normalized": "fast",
-          "translated": "почти"
+          "w": "Fast",
+          "t": "почти",
+          "n": "fast",
+          "p": ["Fast"],
+          "tn": ["почти", "едва не"]
         },
         {
-          "word": "drei",
-          "parts": ["drei"],
-          "normalized": "drei",
-          "translated": "три"
+          "w": "drei",
+          "t": "три",
+          "n": "drei",
+          "p": ["drei"],
+          "tn": ["три"]
         },
         {
-          "word": "Monate",
-          "parts": ["Monate"],
-          "normalized": "Monat",
-          "translated": "месяца"
+          "w": "Monate",
+          "t": "месяца",
+          "n": "Monat",
+          "p": ["Monate"],
+          "tn": ["месяц", "месяцы"]
         }
       ]
     },
     {
+      "translated": "Наши соседи получили её от подруги, у которой была кошка",
       "original": "Unsere Nachbarn haben sie von einer Freundin, deren Katze",
-      "translated": "Наши соседи получили её от подруги, чья кошка",
       "words": [
         {
-          "word": "Unsere",
-          "parts": ["Unsere"],
-          "normalized": "unser",
-          "translated": "наши"
+          "w": "Unsere",
+          "t": "наши",
+          "n": "unser",
+          "p": ["Unsere"],
+          "tn": ["наш", "наша", "наше", "наши"]
         },
         {
-          "word": "Nachbarn",
-          "parts": ["Nachbarn"],
-          "normalized": "Nachbar",
-          "translated": "соседи"
+          "w": "Nachbarn",
+          "t": "соседи",
+          "n": "Nachbar",
+          "p": ["Nachbarn"],
+          "tn": ["сосед", "соседи"]
         },
         {
-          "word": "haben",
-          "parts": ["haben"],
-          "normalized": "haben",
-          "translated": "имели"
+          "w": "haben",
+          "t": "имеют",
+          "n": "haben",
+          "p": ["haben"],
+          "tn": ["иметь", "обладать"]
         },
         {
-          "word": "sie",
-          "parts": ["sie"],
-          "normalized": "sie",
-          "translated": "её"
+          "w": "sie",
+          "t": "ее",
+          "n": "sie",
+          "p": ["sie"],
+          "tn": ["она", "они"]
         },
         {
-          "word": "von",
-          "parts": ["von"],
-          "normalized": "von",
-          "translated": "от"
+          "w": "von",
+          "t": "от",
+          "n": "von",
+          "p": ["von"],
+          "tn": ["от", "со", "из"]
         },
         {
-          "word": "einer",
-          "parts": ["einer"],
-          "normalized": "ein",
-          "translated": "одной"
+          "w": "einer",
+          "t": "одной",
+          "n": "ein",
+          "p": ["einer"],
+          "tn": ["один", "какой-то"]
         },
         {
-          "word": "Freundin",
-          "parts": ["Freundin"],
-          "normalized": "Freundin",
-          "translated": "подруги"
+          "w": "Freundin",
+          "t": "подруги",
+          "n": "Freundin",
+          "p": ["Freundin"],
+          "tn": ["подруга", "приятельница"]
         },
         {
-          "word": "deren",
-          "parts": ["deren"],
-          "normalized": "deren",
-          "translated": "чья"
+          "w": "deren",
+          "t": "чья",
+          "n": "deren",
+          "p": ["deren"],
+          "tn": ["чей", "чья", "чьё", "чьи"]
         },
         {
-          "word": "Katze",
-          "parts": ["Katze"],
-          "normalized": "Katze",
-          "translated": "кошка"
+          "w": "Katze",
+          "t": "кошка",
+          "n": "Katze",
+          "p": ["Katze"],
+          "tn": ["кошка", "кот"]
         }
       ]
     }

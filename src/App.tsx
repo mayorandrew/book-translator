@@ -89,6 +89,8 @@ const PageTranslationResults: Component = () => {
 
   return (
     <TranslationResults
+      originalLanguage={translationsStore.state.originalLanguage}
+      targetLanguage={translationsStore.state.targetLanguage}
       results={translationsStore.state.sentences}
       loading={translationsStore.state.loading}
       onNewText={handleNewText}
@@ -104,9 +106,7 @@ const PageWordList: Component = () => {
     navigate('/translation-results');
   };
 
-  return (
-    <WordList words={wordsList.state} onBack={handleBack} />
-  );
+  return <WordList words={wordsList.state} onBack={handleBack} />;
 };
 
 const App: Component = () => {

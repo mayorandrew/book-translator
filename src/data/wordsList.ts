@@ -1,5 +1,6 @@
 import { createStore } from 'solid-js/store';
 import { makePersisted } from '@solid-primitives/storage';
+import { isDeepEqual, unique } from 'remeda';
 
 export interface VocabularyWordExample {
   sentence: string;
@@ -9,8 +10,10 @@ export interface VocabularyWordExample {
 }
 
 export interface VocabularyWord {
+  originalLanguage: string;
+  targetLanguage: string;
   normalized: string;
-  translated: string;
+  translations: string[];
   examples: VocabularyWordExample[];
 }
 
@@ -26,6 +29,21 @@ export const wordsList = {
   removeWord: (normalized: string) => {
     setList((prev) => prev.filter((word) => word.normalized !== normalized));
   },
+  removeExample: (normalized: string, example: VocabularyWordExample) => {
+    setList((prev) => {
+      return prev
+        .map((word) => {
+          if (word.normalized === normalized) {
+            return {
+              ...word,
+              examples: word.examples.filter((e) => !isDeepEqual(e, example)),
+            };
+          }
+          return word;
+        })
+        .filter((word) => word.examples.length > 0);
+    });
+  },
   addExample: (normalized: string, example: VocabularyWordExample) => {
     setList((prev) => {
       return prev.map((word) => {
@@ -39,8 +57,24 @@ export const wordsList = {
       });
     });
   },
-  add: (...words: VocabularyWord[]) => {
-    setList((prev) => [...prev, ...words]);
+  add: (word: VocabularyWord) => {
+    setList((prev) => {
+      const existing = prev.find((w) => w.normalized === word.normalized);
+      if (existing) {
+        return prev.map((w) => {
+          if (w.normalized === word.normalized) {
+            return {
+              ...w,
+              translations: unique([...w.translations, ...word.translations]),
+              examples: [...w.examples, ...word.examples],
+            };
+          }
+          return w;
+        });
+      }
+
+      return [...prev, word];
+    });
   },
   clear: () => {
     setList([]);

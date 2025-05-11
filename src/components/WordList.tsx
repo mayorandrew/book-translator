@@ -26,18 +26,18 @@ const WordList: Component<WordListProps> = (props) => {
               {(word: VocabularyWord) => (
                 <tr class={s.row}>
                   <td class={s.cell}>{word.normalized}</td>
-                  <td class={s.cell}>{word.translated}</td>
+                  <td class={s.cell}>{word.translations?.join(', ')}</td>
                   <td class={s.cell}>
                     <For each={word.examples}>
                       {(example: VocabularyWordExample) => (
                         <div class={s.example}>
-                          <p class={s.exampleSentence}>{example.sentence}</p>
-                          <p class={s.exampleTranslation}>
-                            {example.sentenceTranslated}
-                          </p>
                           <p class={s.exampleTranslation}>
                             {example.wordParts.join('…')} —{' '}
                             {example.wordTranslated}
+                          </p>
+                          <p class={s.exampleSentence}>{example.sentence}</p>
+                          <p class={s.exampleTranslation}>
+                            {example.sentenceTranslated}
                           </p>
                         </div>
                       )}
