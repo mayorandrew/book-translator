@@ -1,6 +1,81 @@
-import type { Component, JSX } from 'solid-js';
-import type { Sentence } from '../data/translationsStore';
+import { Component, createMemo, JSX } from 'solid-js';
+import { Popover } from '@kobalte/core/popover';
+import type { Sentence, Word } from '../data/translationsStore';
 import s from './TranslatedSentence.module.css';
+import { Button, ButtonVariant } from './ui/Button';
+import { wordsList } from '../data/wordsList';
+import { isDeepEqual } from 'remeda';
+
+interface WordProps {
+  word: Word;
+  sentence: Sentence;
+  index: number;
+}
+
+const Word: Component<WordProps> = (props) => {
+  const hasWord = () => wordsList.findWord(props.word.normalized);
+
+  const example = createMemo(() => ({
+    sentence: props.sentence.original,
+    sentenceTranslated: props.sentence.translated,
+    wordTranslated: props.word.translated,
+    wordParts: props.word.parts,
+  }));
+
+  const hasExample = () => {
+    const newExample = example();
+    return hasWord()?.examples.some((e) => isDeepEqual(newExample, e));
+  };
+
+  return (
+    <Popover gutter={-8}>
+      <Popover.Trigger class={s.Word}>{props.word.word}</Popover.Trigger>
+      <Popover.Portal>
+        <Popover.Content class={s.__tooltipContent}>
+          <Popover.Arrow />
+          <div>{`${props.word.parts.join('…')} (${props.word.normalized}) — ${props.word.translated}`}</div>
+          {hasWord() ? (
+            <>
+              {!hasExample() && (
+                <Button
+                  class={s.__tooltipButton}
+                  title="Add example"
+                  onClick={() =>
+                    wordsList.addExample(props.word.normalized, example())
+                  }
+                >
+                  +
+                </Button>
+              )}
+              <Button
+                variant={ButtonVariant.Secondary}
+                class={s.__tooltipButton}
+                title="Remove from vocabulary"
+                onClick={() => wordsList.removeWord(props.word.normalized)}
+              >
+                -
+              </Button>
+            </>
+          ) : (
+            <Button
+              class={s.__tooltipButton}
+              title="Add to vocabulary"
+              onClick={() =>
+                wordsList.add({
+                  normalized: props.word.normalized,
+                  translated: props.word.translated,
+                  examples: [example()],
+                })
+              }
+            >
+              +
+            </Button>
+          )}
+        </Popover.Content>
+      </Popover.Portal>
+    </Popover>
+  );
+};
 
 interface TranslatedSentenceProps {
   sentence: Sentence;
@@ -41,12 +116,7 @@ const TranslatedSentence: Component<TranslatedSentenceProps> = (props) => {
       }
 
       result.push(
-        <span
-          class={s.translatedWord}
-          title={`${nextWord.parts.join('…')} (${nextWord.normalized}) — ${nextWord.translated}`}
-        >
-          {nextWord.word}
-        </span>,
+        <Word word={nextWord} sentence={props.sentence} index={iWord} />,
       );
 
       index = wordStart + nextWord.word.length;

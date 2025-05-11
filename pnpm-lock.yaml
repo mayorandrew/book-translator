@@ -40,6 +40,9 @@ importers:
       openai:
         specifier: ^4.96.2
         version: 4.96.2(zod@3.24.3)
+      remeda:
+        specifier: ^2.21.4
+        version: 2.21.4
       solid-js:
         specifier: ^1.9.5
         version: 1.9.5
@@ -788,6 +791,9 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  remeda@2.21.4:
+    resolution: {integrity: sha512-ggHgfoRtq/Tk+kKQGYH0TX5lAxQXFSQ8qYUxsyZV80+HCwy5/jSEjYHlnR16KwlvYrad1JaQr5q0gfQSy268lQ==}
+
   rollup@4.27.4:
     resolution: {integrity: sha512-RLKxqHEMjh/RGLsDxAEsaLO3mWgyoU6x9w6n1ikAzet4B3gI2/3yP6PWY2p9QzRTh6MfEIXB3MwsOY0Iv3vNrw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -834,6 +840,10 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  type-fest@4.41.0:
+    resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
+    engines: {node: '>=16'}
 
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
@@ -1592,6 +1602,10 @@ snapshots:
 
   prettier@3.5.3: {}
 
+  remeda@2.21.4:
+    dependencies:
+      type-fest: 4.41.0
+
   rollup@4.27.4:
     dependencies:
       '@types/estree': 1.0.6
@@ -1654,6 +1668,8 @@ snapshots:
   tr46@0.0.3: {}
 
   tslib@2.8.1: {}
+
+  type-fest@4.41.0: {}
 
   typescript@5.7.2: {}
 

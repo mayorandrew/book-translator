@@ -18,7 +18,7 @@
 
   [data-theme='dark'] & {
     --surface-header: #1e1e1e;
-    --surface-row-hover: #2c2c2c;
+    --surface-row-hover: #1c1c1c;
     --border-table: #444444;
   }
 }

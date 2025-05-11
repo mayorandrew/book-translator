@@ -3,12 +3,43 @@
   display: inline;
 }
 
-.translatedWord {
-  cursor: help;
+.Word {
+  cursor: pointer;
   position: relative;
-  border-bottom: 1px dotted #ccc;
+  background: none;
+  color: inherit;
+  border: none;
+  margin: -2px -4px;
+  padding: 2px 4px;
+  display: inline-block;
 }
 
-.translatedWord:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.Word:hover, .Word._hover {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  [data-theme='dark'] & {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.__tooltipContent {
+  z-index: 1000;
+  max-width: min(calc(100vw - 16px), 380px);
+  border: 1px solid var(--border-main);
+  border-radius: 4px;
+  padding: 8px;
+  background-color: var(--surface-main);
+  color: var(--text-on-main);
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  /*noinspection CssUnresolvedCustomProperty*/
+  transform-origin: var(--kb-tooltip-content-transform-origin);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.__tooltipButton {
+  padding: 4px;
 }
