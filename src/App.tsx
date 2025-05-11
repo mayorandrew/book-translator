@@ -1,9 +1,11 @@
 import { Component, createEffect } from 'solid-js';
 import { openaiClient } from './data/openaiClient';
 import { translationsStore } from './data/translationsStore';
+import { wordsList } from './data/wordsList';
 import ApiKeyForm from './components/ApiKeyForm';
 import BookTextForm from './components/BookTextForm';
 import TranslationResults from './components/TranslationResults';
+import WordList from './components/WordList';
 import { textTranslationService } from './data/textTranslationService';
 import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './utils/ThemeContext';
@@ -41,30 +43,6 @@ const PageApiKey: Component = () => {
   );
 };
 
-const PageTranslationResults: Component = () => {
-  const navigate = useNavigate();
-
-  createEffect(() => {
-    if (translationsStore.state.sentences.length === 0) {
-      navigate('/', { replace: true });
-    }
-  });
-
-  const handleNewText = () => {
-    textTranslationService.abort();
-    translationsStore.clear();
-    navigate('/new-text');
-  };
-
-  return (
-    <TranslationResults
-      results={translationsStore.state.sentences}
-      loading={translationsStore.state.loading}
-      onNewText={handleNewText}
-    />
-  );
-};
-
 const PageNewText: Component = () => {
   const navigate = useNavigate();
 
@@ -90,6 +68,47 @@ const PageNewText: Component = () => {
   );
 };
 
+const PageTranslationResults: Component = () => {
+  const navigate = useNavigate();
+
+  createEffect(() => {
+    if (translationsStore.state.sentences.length === 0) {
+      navigate('/', { replace: true });
+    }
+  });
+
+  const handleNewText = () => {
+    textTranslationService.abort();
+    translationsStore.clear();
+    navigate('/new-text');
+  };
+
+  const handleWordList = () => {
+    navigate('/word-list');
+  };
+
+  return (
+    <TranslationResults
+      results={translationsStore.state.sentences}
+      loading={translationsStore.state.loading}
+      onNewText={handleNewText}
+      onWordList={handleWordList}
+    />
+  );
+};
+
+const PageWordList: Component = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/translation-results');
+  };
+
+  return (
+    <WordList words={wordsList.state} onBack={handleBack} />
+  );
+};
+
 const App: Component = () => {
   return (
     <ThemeProvider>
@@ -99,6 +118,7 @@ const App: Component = () => {
         <Route path="/api-key" component={PageApiKey} />
         <Route path="/new-text" component={PageNewText} />
         <Route path="/translation-results" component={PageTranslationResults} />
+        <Route path="/word-list" component={PageWordList} />
       </Router>
     </ThemeProvider>
   );

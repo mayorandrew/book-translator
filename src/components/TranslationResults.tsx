@@ -9,6 +9,7 @@ interface TranslationResultsProps {
   results: Sentence[];
   loading?: boolean;
   onNewText?: () => void;
+  onWordList?: () => void;
 }
 
 const TranslationResults: Component<TranslationResultsProps> = (props) => {
@@ -43,6 +44,7 @@ const TranslationResults: Component<TranslationResultsProps> = (props) => {
       </div>
       <div class={s.buttonContainer}>
         <Button onClick={() => props.onNewText?.()}>New Text</Button>
+        <Button onClick={() => props.onWordList?.()}>Word List</Button>
       </div>
     </div>
   );

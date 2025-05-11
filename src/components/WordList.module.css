@@ -55,11 +55,27 @@
   transition: background-color var(--transition-time-default);
 }
 
-.buttonContainer {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 20px;
-  gap: 16px;
+.example {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
+
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.exampleSentence {
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.exampleTranslation {
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -70,10 +86,6 @@
 }
 
 @media print {
-  .buttonContainer {
-    display: none;
-  }
-
   .container {
     margin: 0;
     padding: 0;
