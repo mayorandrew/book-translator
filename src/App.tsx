@@ -91,7 +91,7 @@ const App: Component = () => {
   return (
     <ThemeProvider>
       <ThemeToggle />
-      <Router base={process.env.BASE_URL || '/'}>
+      <Router base={import.meta.env.VITE_BASE_URL || '/'}>
         <Route path="/" component={Home} />
         <Route path="/new-text" component={PageNewText} />
         <Route path="/api-key" component={PageApiKey} />
