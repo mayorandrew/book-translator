@@ -25,6 +25,10 @@
   }
 }
 
+.exportButtonContainer {
+  margin-bottom: 20px;
+}
+
 .tableContainer {
   flex-grow: 1;
 }
