@@ -1,4 +1,4 @@
-import { Component, createEffect } from 'solid-js';
+import { Component, createEffect, JSX } from 'solid-js';
 import { openaiClient } from './data/openaiClient';
 import { translationsStore } from './data/translationsStore';
 import { wordsList } from './data/wordsList';
@@ -7,10 +7,10 @@ import BookTextForm from './components/BookTextForm';
 import TranslationResults from './components/TranslationResults';
 import WordList from './components/WordList';
 import { textTranslationService } from './data/textTranslationService';
-import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './utils/ThemeContext';
 import { demoMode } from './data/demoMode';
 import { Route, Router, useNavigate } from '@solidjs/router';
+import Navigation from './components/Navigation';
 
 const Home: Component = () => {
   const navigate = useNavigate();
@@ -18,9 +18,9 @@ const Home: Component = () => {
   if (!textTranslationService.ready()) {
     navigate('/api-key', { replace: true });
   } else if (translationsStore.state.sentences.length > 0) {
-    navigate('/translation-results', { replace: true });
+    navigate('/text/translated', { replace: true });
   } else {
-    navigate('/new-text', { replace: true });
+    navigate('/text/new', { replace: true });
   }
 
   return null;
@@ -52,17 +52,13 @@ const PageNewText: Component = () => {
     }
   });
 
-  createEffect(() => {
-    if (translationsStore.state.sentences.length > 0) {
-      navigate('/translation-results');
-    }
-  });
-
   return (
     <BookTextForm
       loading={translationsStore.state.loading}
       onTranslate={(text, targetLanguage) =>
-        textTranslationService.translateText(text, targetLanguage)
+        textTranslationService.translateText(text, targetLanguage, () => {
+          navigate('/text/translated');
+        })
       }
     />
   );
@@ -80,11 +76,11 @@ const PageTranslationResults: Component = () => {
   const handleNewText = () => {
     textTranslationService.abort();
     translationsStore.clear();
-    navigate('/new-text');
+    navigate('/text/new');
   };
 
   const handleWordList = () => {
-    navigate('/word-list');
+    navigate('/words');
   };
 
   return (
@@ -100,25 +96,31 @@ const PageTranslationResults: Component = () => {
 };
 
 const PageWordList: Component = () => {
-  const navigate = useNavigate();
+  return <WordList words={wordsList.state} />;
+};
 
-  const handleBack = () => {
-    navigate('/translation-results');
-  };
+interface LayoutProps {
+  children?: JSX.Element;
+}
 
-  return <WordList words={wordsList.state} onBack={handleBack} />;
+const Layout: Component<LayoutProps> = (props) => {
+  return (
+    <>
+      <Navigation />
+      {props.children}
+    </>
+  );
 };
 
 const App: Component = () => {
   return (
     <ThemeProvider>
-      <ThemeToggle />
-      <Router base={import.meta.env.VITE_BASE_URL || '/'}>
+      <Router base={import.meta.env.VITE_BASE_URL || '/'} root={Layout}>
         <Route path="/" component={Home} />
         <Route path="/api-key" component={PageApiKey} />
-        <Route path="/new-text" component={PageNewText} />
-        <Route path="/translation-results" component={PageTranslationResults} />
-        <Route path="/word-list" component={PageWordList} />
+        <Route path="/text/new" component={PageNewText} />
+        <Route path="/text/translated" component={PageTranslationResults} />
+        <Route path="/words" component={PageWordList} />
       </Router>
     </ThemeProvider>
   );

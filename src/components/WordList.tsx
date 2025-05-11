@@ -1,12 +1,10 @@
 import type { Component } from 'solid-js';
 import { For, Show } from 'solid-js';
-import { Button } from './ui/Button';
 import { VocabularyWord, VocabularyWordExample } from '../data/wordsList';
 import s from './WordList.module.css';
 
 interface WordListProps {
   words: VocabularyWord[];
-  onBack?: () => void;
 }
 
 const WordList: Component<WordListProps> = (props) => {
@@ -55,9 +53,6 @@ const WordList: Component<WordListProps> = (props) => {
             </Show>
           </tbody>
         </table>
-      </div>
-      <div class={s.buttonContainer}>
-        <Button onClick={() => props.onBack?.()}>Back to Translation</Button>
       </div>
     </div>
   );

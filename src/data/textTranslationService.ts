@@ -18,6 +18,7 @@ const translateTextLlm = (): TextTranslationLlm =>
 const translateText = async (
   text: string,
   targetLanguage: string,
+  onFirstSentence?: () => void,
 ): Promise<void> => {
   const llm = translateTextLlm();
 
@@ -103,6 +104,7 @@ const translateText = async (
               }),
             ),
           });
+          onFirstSentence?.();
         }
       })(),
     ]);

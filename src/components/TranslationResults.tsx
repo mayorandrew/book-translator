@@ -50,10 +50,6 @@ const TranslationResults: Component<TranslationResultsProps> = (props) => {
           </tbody>
         </table>
       </div>
-      <div class={s.buttonContainer}>
-        <Button onClick={() => props.onNewText?.()}>New Text</Button>
-        <Button onClick={() => props.onWordList?.()}>Word List</Button>
-      </div>
     </div>
   );
 };

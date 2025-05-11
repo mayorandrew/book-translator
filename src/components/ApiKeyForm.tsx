@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { Button } from './ui/Button';
+import { Button, ButtonVariant } from './ui/Button';
 import { Input } from './ui/Input';
 import s from './ApiKeyForm.module.css';
 
@@ -35,7 +35,13 @@ const ApiKeyForm: Component<ApiKeyFormProps> = (props) => {
             />
           </div>
           <div class={s.buttons}>
-            <Button variant="secondary" type="button" onClick={props.onChooseDemoMode}>Demo mode</Button>
+            <Button
+              variant={ButtonVariant.Secondary}
+              type="button"
+              onClick={props.onChooseDemoMode}
+            >
+              Demo mode
+            </Button>
             <Button type="submit">Save API Key</Button>
           </div>
         </form>

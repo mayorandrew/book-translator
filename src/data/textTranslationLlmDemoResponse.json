@@ -581,8 +581,8 @@
       ]
     },
     {
-      "translated": "Наши соседи получили её от подруги, у которой была кошка",
-      "original": "Unsere Nachbarn haben sie von einer Freundin, deren Katze",
+      "translated": "Наши соседи получили её от подруги",
+      "original": "Unsere Nachbarn haben sie von einer Freundin",
       "words": [
         {
           "w": "Unsere",
@@ -632,20 +632,6 @@
           "n": "Freundin",
           "p": ["Freundin"],
           "tn": ["подруга", "приятельница"]
-        },
-        {
-          "w": "deren",
-          "t": "чья",
-          "n": "deren",
-          "p": ["deren"],
-          "tn": ["чей", "чья", "чьё", "чьи"]
-        },
-        {
-          "w": "Katze",
-          "t": "кошка",
-          "n": "Katze",
-          "p": ["Katze"],
-          "tn": ["кошка", "кот"]
         }
       ]
     }
