@@ -73,24 +73,12 @@ const PageTranslationResults: Component = () => {
     }
   });
 
-  const handleNewText = () => {
-    textTranslationService.abort();
-    translationsStore.clear();
-    navigate('/text/new');
-  };
-
-  const handleWordList = () => {
-    navigate('/words');
-  };
-
   return (
     <TranslationResults
       originalLanguage={translationsStore.state.originalLanguage}
       targetLanguage={translationsStore.state.targetLanguage}
       results={translationsStore.state.sentences}
       loading={translationsStore.state.loading}
-      onNewText={handleNewText}
-      onWordList={handleWordList}
     />
   );
 };

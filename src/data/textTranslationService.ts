@@ -22,8 +22,6 @@ const translateText = async (
 ): Promise<void> => {
   const llm = translateTextLlm();
 
-  translationsStore.setLoading(true);
-
   const controller = new AbortController();
   setAbortController((prev) => {
     if (prev && !prev.signal.aborted) {
@@ -31,6 +29,9 @@ const translateText = async (
     }
     return controller;
   });
+
+  translationsStore.clear();
+  translationsStore.setLoading(true);
 
   try {
     const batches = splitTextIntoBatches(text, 1000);

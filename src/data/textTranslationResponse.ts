@@ -4,16 +4,16 @@ const zWord = z
   .object({
     w: z
       .string()
-      .describe('The word as it appears in the original sentence.'),
+      .describe('The word part as it appears in the original sentence.'),
     p: z
       .array(z.string())
       .describe(
-        'List of all parts related to the same word from the original sentence',
+        "List of all parts related to the same normalized word from the original sentence. For example, if a word has a separable prefix, include it here in order. (e.g. German \"rufe ... an\" -> ['rufe', 'an'])",
       ),
     n: z
       .string()
       .describe(
-        'The normalized form of the word (e.g. singular nominative for nouns or infinitive for verbs)',
+        'The normalized form of the word (e.g. singular nominative for nouns or infinitive for verbs (including separable prefix))',
       ),
     t: z
       .string()
@@ -45,7 +45,9 @@ export const zSentence = z.object({
 });
 
 export const zTextTranslationResponse = z.object({
-  originalLanguage: z.string().describe('The 2-letter ISO code of the source language'),
+  originalLanguage: z
+    .string()
+    .describe('The 2-letter ISO code of the source language'),
   sentences: z.array(zSentence),
 });
 

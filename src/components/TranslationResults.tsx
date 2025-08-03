@@ -10,8 +10,6 @@ interface TranslationResultsProps {
   targetLanguage: string;
   results: Sentence[];
   loading?: boolean;
-  onNewText?: () => void;
-  onWordList?: () => void;
 }
 
 const TranslationResults: Component<TranslationResultsProps> = (props) => {

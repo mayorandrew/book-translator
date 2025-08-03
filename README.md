@@ -10,13 +10,15 @@ Book Translator is a frontend-only application designed to help language learner
 
 The app features:
 
-- Input area for pasting book text
 - Translation via OpenAI API
 - Side-by-side display of the original and translated text
 - Streaming responses for instant feedback
 - Highlight individual words to get specific translations
+- Collect unknown words and export in Anki-compatible CSV
 
 Users need to provide their OpenAI API key to use the translation service.
+
+There is also a Demo mode available. In Demo mode, a predefined text is streamed without using OpenAI API.
 
 ## Technology
 
@@ -47,4 +49,4 @@ The build is minified and the filenames include the hashes.
 
 ## Deployment
 
-The project is automatically deployed to GitHub Pages with a GitHub Actions workflow.  
+The project is automatically deployed to GitHub Pages with a GitHub Actions workflow.

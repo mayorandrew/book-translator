@@ -212,29 +212,31 @@ export const textTranslationLlmOpenai: TextTranslationLlm = {
         input: [
           {
             role: 'system',
-            content:
-              `
-                  You are a translator.
-                  Detect the original language of the text and split the text into sentences. 
-                  Translate each sentence into language with ISO code "${targetLanguage}", and return them as a JSON list of objects. 
-                  Each object should include the following fields:
-                  - "original" - original sentence, 
-                  - "translated" - translated sentence in the target language,
-                  - "words" - array of all words in sentence. Each word is represented by an object with the following properties:
-                    - "normalized" - normalized form of the word,
-                    - "translated" - translation of the word in the context of this specific sentence,
-                    - "parts" - an array of word parts in the original sentence. If a word has a separable prefix (e.g. German "rufe ... an" / "anrufen"), collect all parts together under a single word,
-                    - "tn" - an array of possible translations of the normalized word in the target language.
+            content: `
+                You are a translator.
+                Detect the original language of the text and split the text into sentences. 
+                Translate each sentence into language with ISO code "${targetLanguage}", and return them as a JSON list of objects. 
+                Each object should include the following fields:
+                - "original" - original sentence, 
+                - "translated" - translated sentence in the target language,
+                - "words" - array of all words in sentence. Each word is represented by an object. Check the response schema for more info.
+                
+                Do not stop until all sentences are printed out.
+                
+                ---
                   
-                  Do not stop until all sentences are printed out.
-                  ` +
-              `
-                For example, if the target language is "ru" and the original sentences are:
+                For example, if the original sentences are:
                 \`So stelle ich mir meine Traumkatze vor.\`
                 \`„Sie heißt Sternchen", teilte Jasmin ihrer besten Freundin Lara auf dem Nachhauseweg von der Schule mit.\`
 
-                The result would be:
-                \`\`\`${JSON.stringify(exampleResult)}\`\`\``,
+                And the target language is "ru", then the result would be:
+                \`\`\`${JSON.stringify(exampleResult)}\`\`\`
+                
+                ---
+                
+                Make sure to output "translated" as well as "t" and "tn" in the target language "${targetLanguage}".
+                Pay special attention to German verbs with separable prefixes.
+                Now user will send the text.`,
           },
           {
             role: 'user',
